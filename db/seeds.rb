@@ -17,7 +17,7 @@ user8 = User.create!(email: "florent@gmail.com", password: "floflo", name: "Flor
 user9 = User.create!(email: "loris@gmail.com", password: "lololo", name: "Loris")
 user10 = User.create!(email: "jean-loup@gmail.com", password: "jljljl", name: "Jean-Loup")
 
-file1 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669200839/Rockets/Fus%C3%A9e6_ndhomg.png")
+file1 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip1 = Road_trip.new(
   title: "America Girls only",
   user: user1,
@@ -39,10 +39,10 @@ road_trip1 = Road_trip.new(
   currency: "dollars",
   housing_type: "hostel" ,
   visits_activities:)
-road_trip1.photo.attach(io: file1, filename: "road_trip1.png", content_type: "image/png")
+road_trip1.photo.attach(io: file1, filename: "road_trip1.png", content_type: "image/jpg")
 road_trip1.save
 
-file2 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669200861/Rockets/Fus%C3%A9e8_whpgb1.png")
+file2 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip2 = Road_trip.new(
   title: "Aventure in South America",
   user: user2,
@@ -64,10 +64,10 @@ road_trip2 = Road_trip.new(
   currency: "real",
   housing_type: "hostel",
   visits_activities:)
-road_trip2.photo.attach(io: file2, filename: "road_trip2.png", content_type: "image/png")
+road_trip2.photo.attach(io: file2, filename: "road_trip2.png", content_type: "image/jpg")
 road_trip2.save
 
-file3 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669200826/Rockets/Fus%C3%A9e5_icrod8.png")
+file3 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip3 = Road_trip.new(
   title: "Road-Trip in Australia",
   user: user3,
@@ -89,10 +89,10 @@ road_trip3 = Road_trip.new(
   currency: "dollars",
   housing_type: "hostel",
   visits_activities:)
-road_trip3.photo.attach(io: file3, filename: "road_trip3.png", content_type: "image/png")
+road_trip3.photo.attach(io: file3, filename: "road_trip3.png", content_type: "image/jpg")
 road_trip3.save
 
-file4 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669200850/Rockets/Fus%C3%A9e7_atobct.png")
+file4 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip4 = Road_trip.new(
   title: "Europe Tour",
   user: user4,
@@ -114,10 +114,10 @@ road_trip4 = Road_trip.new(
   currency: "euros",
   housing_type: "hostel" ,
   visits_activities:)
-road_trip4.photo.attach(io: file4, filename: "road_trip4.png", content_type: "image/png")
+road_trip4.photo.attach(io: file4, filename: "road_trip4.png", content_type: "image/jpg")
 road_trip4.save
 
-file5 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669200780/Rockets/Fus%C3%A9e1_pqaaf9.png")
+file5 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip5 = Road_trip.new(
 title: "Travel in New Zealand",
 user: user5,
@@ -139,10 +139,10 @@ local_language: "English",
 currency: "dollars",
 housing_type: "hostel" ,
 visits_activities:)
-road_trip5.photo.attach(io: file5, filename: "road_trip5.png", content_type: "image/png")
+road_trip5.photo.attach(io: file5, filename: "road_trip5.png", content_type: "image/jpg")
 road_trip5.save
 
-file6 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669200804/Rockets/Fus%C3%A9e3_c18bvi.png")
+file6 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip6 = Road_trip.new(
   title: "America America Baby",
   user: user6,
@@ -164,10 +164,10 @@ road_trip6 = Road_trip.new(
   currency: "dollars",
   housing_type: "hostel" ,
   visits_activities:)
-road_trip6.photo.attach(io: file6, filename: "road_trip6.png", content_type: "image/png")
+road_trip6.photo.attach(io: file6, filename: "road_trip6.png", content_type: "image/jpg")
 road_trip6.save
 
-file7 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669200814/Rockets/Fus%C3%A9e4_pkwhns.png")
+file7 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip7 = Road_trip.new(
   title: "World's Island Tour",
   user: user7,
@@ -189,10 +189,10 @@ road_trip7 = Road_trip.new(
   currency: "euros",
   housing_type: "camping" ,
   visits_activities:)
-road_trip7.photo.attach(io: file7, filename: "road_trip7.png", content_type: "image/png")
+road_trip7.photo.attach(io: file7, filename: "road_trip7.png", content_type: "image/jpg")
 road_trip7.save
 
-file8 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669289196/Rockets/Fus%C3%A9e10_q9gxbe.jpg")
+file8 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip8 = Road_trip.new(
   title: "British Mode",
   user: user8,
@@ -214,10 +214,10 @@ road_trip8 = Road_trip.new(
   currency: "Livre sterling",
   housing_type: "hostel" ,
   visits_activities:)
-road_trip8.photo.attach(io: file8, filename: "road_trip8.png", content_type: "image/png")
+road_trip8.photo.attach(io: file8, filename: "road_trip8.png", content_type: "image/jpg")
 road_trip8.save
 
-file9 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669289196/Rockets/Fus%C3%A9e10_q9gxbe.jpg")
+file9 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip9 = Road_trip.new(
   title: "Let's see the world",
   user: user9,
@@ -239,10 +239,10 @@ road_trip9 = Road_trip.new(
   currency: "Kip laotien",
   housing_type: "hostel" ,
   visits_activities:)
-road_trip9.photo.attach(io: file9, filename: "road_trip9.png", content_type: "image/png")
+road_trip9.photo.attach(io: file9, filename: "road_trip9.png", content_type: "image/jpg")
 road_trip9.save
 
-file10 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669289196/Rockets/Fus%C3%A9e10_q9gxbe.jpg")
+file10 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip10 = Road_trip.new(
   title: "Singapore Dream",
   user: user10,
@@ -264,5 +264,5 @@ road_trip10 = Road_trip.new(
   currency: "dollars",
   housing_type: "hostel" ,
   visits_activities:)
-road_trip10.photo.attach(io: file10, filename: "road_trip10.png", content_type: "image/png")
+road_trip10.photo.attach(io: file10, filename: "road_trip10.png", content_type: "image/jpg")
 road_trip10.save
