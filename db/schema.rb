@@ -10,9 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_28_162854) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_28_170609) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "participations", force: :cascade do |t|
+    t.boolean "validated"
+    t.bigint "user_id", null: false
+    t.bigint "road_trip_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["road_trip_id"], name: "index_participations_on_road_trip_id"
+    t.index ["user_id"], name: "index_participations_on_user_id"
+  end
+
+  create_table "points", force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
+    t.string "city"
+    t.string "country"
+    t.string "continent"
+    t.date "start_date"
+    t.date "end_date"
+    t.text "description"
+    t.float "budget_day"
+    t.string "local_language"
+    t.string "currency"
+    t.string "housing_type"
+    t.string "visits_activities"
+    t.bigint "road_trip_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["road_trip_id"], name: "index_points_on_road_trip_id"
+  end
+
+  create_table "road_trips", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "native_language"
+    t.string "other_language"
+    t.string "work"
+    t.integer "number_participants"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_road_trips_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +69,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_162854) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "participations", "road_trips"
+  add_foreign_key "participations", "users"
+  add_foreign_key "points", "road_trips"
+  add_foreign_key "road_trips", "users"
 end
