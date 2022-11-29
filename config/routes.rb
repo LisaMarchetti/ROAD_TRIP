@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'participations/validate'
+  get 'road_trips/index'
+  get 'road_trips/show'
+  get 'road_trips/new'
+  get 'road_trips/create'
+  get 'road_trips/edit'
+  get 'road_trips/update'
   devise_for :users
   root to: "road_trips#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
