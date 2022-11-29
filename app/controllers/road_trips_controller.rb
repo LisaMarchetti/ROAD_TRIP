@@ -4,9 +4,11 @@ class RoadTripsController < ApplicationController
   end
 
   def show
+    @road_trip = RoadTrip.find(params[:id])
   end
 
   def new
+    @road_trip = RoadTrip.new()
   end
 
   def create
