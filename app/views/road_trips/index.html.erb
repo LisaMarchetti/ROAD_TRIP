@@ -1,27 +1,19 @@
 
 
 <div class="container-search">
-  <div>
-    <%= form_with url: search_path, method: :get, class: "d-flex" do %>
-      <h3>Destination</h3>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Choose a destination"
-      %>
-  </div>
-  <div>
-    <h3>Start date</h3>
-    <%= date_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Choose a start date"
-    %>
-  </div>
-  <div>
-      <%= submit_tag "Search", class: "btn-search" %>
-    <% end %>
-  </div>
+  <%= form_with url: road_trips_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :destination,
+    params[:destination],
+    class: "form-control",
+    placeholder: "Enter a destination (continent, country, state, city)"
+  %>
+  <%= date_field_tag :departure,
+    params[:departure],
+    class: "form-control",
+    placeholder: "Enter a destination (continent, country, state, city)"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
 </div>
 
 <div class="container-home">
