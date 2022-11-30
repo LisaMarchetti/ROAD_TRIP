@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+Point.destroy_all
 RoadTrip.destroy_all
 User.destroy_all
 
@@ -29,7 +29,7 @@ road_trip1 = RoadTrip.new(
   other_language: "Spanish",
   work: "Yes",
   number_participants: 6)
-road_trip1.photo.attach(io: file1, filename: "road_trip1.png", content_type: "image/jpg")
+road_trip1.photo.attach(io: file1, filename: "road_trip1.jpg", content_type: "image/jpg")
 road_trip1.save
 point1_1 = Point.new(
   longitude: 47.629,
@@ -39,11 +39,11 @@ point1_1 = Point.new(
   continent: "North America",
   start_date: "2023-06-16",
   end_date: "2024-01-17",
-  description: "",
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   budget_day: 70,
   local_language: "English",
   currency: "dollars",
-  housing_type: "hostel" ,
+  housing_type: "hostel",
   visits_activities: "",
   road_trip_id: road_trip1.id)
 point1_1.save
@@ -55,11 +55,11 @@ point1_2 = Point.new(
   continent: "North America",
   start_date: "2024-01-18",
   end_date: "2024-04-17",
-  description: "",
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   budget_day: 60,
   local_language: "English",
   currency: "dollars",
-  housing_type: "hostel" ,
+  housing_type: "hostel",
   visits_activities: "",
   road_trip_id: road_trip1.id)
 point1_2.save
@@ -71,11 +71,11 @@ point1_3 = Point.new(
   continent: "North America",
   start_date: "2024-01-19",
   end_date: "2024-06-18",
-  description: "",
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   budget_day: 65,
   local_language: "English",
   currency: "dollars",
-  housing_type: "hostel" ,
+  housing_type: "hostel",
   visits_activities: "",
   road_trip_id: road_trip1.id)
 point1_3.save
@@ -89,7 +89,7 @@ road_trip2 = RoadTrip.new(
   other_language: "Spanish",
   work: "Yes",
   number_participants: 8)
-road_trip2.photo.attach(io: file2, filename: "road_trip2.png", content_type: "image/jpg")
+road_trip2.photo.attach(io: file2, filename: "road_trip2.jpg", content_type: "image/jpg")
 road_trip2.save
   point2_1 = Point.new(
   longitude: -43.18,
@@ -117,7 +117,7 @@ road_trip3 = RoadTrip.new(
   other_language: "English",
   work: "Yes",
   number_participants: 5)
-road_trip3.photo.attach(io: file3, filename: "road_trip3.png", content_type: "image/jpg")
+road_trip3.photo.attach(io: file3, filename: "road_trip3.jpg", content_type: "image/jpg")
 road_trip3.save
 point3_1 = Point.new(
   longitude: 151.2,
@@ -145,7 +145,7 @@ road_trip4 = RoadTrip.new(
   other_language: "English",
   work: "No",
   number_participants: 7)
-road_trip4.photo.attach(io: file4, filename: "road_trip4.png", content_type: "image/jpg")
+road_trip4.photo.attach(io: file4, filename: "road_trip4.jpg", content_type: "image/jpg")
 road_trip4.save
 point4_1 = Point.new(
   longitude: 13.404954,
@@ -159,7 +159,7 @@ point4_1 = Point.new(
   budget_day: 50,
   local_language: "English",
   currency: "euros",
-  housing_type: "hostel" ,
+  housing_type: "hostel",
   visits_activities: "",
   road_trip_id: road_trip4.id)
 point4_1.save
@@ -173,7 +173,7 @@ road_trip5 = RoadTrip.new(
   other_language: "English",
   work: "No",
   number_participants: 4)
-road_trip5.photo.attach(io: file5, filename: "road_trip5.png", content_type: "image/jpg")
+road_trip5.photo.attach(io: file5, filename: "road_trip5.jpg", content_type: "image/jpg")
 road_trip5.save
 point5_1 = Point.new(
   longitude: 174.776236,
@@ -187,7 +187,7 @@ point5_1 = Point.new(
   budget_day: 55,
   local_language: "English",
   currency: "dollars",
-  housing_type: "hostel" ,
+  housing_type: "hostel",
   visits_activities: "",
   road_trip_id: road_trip5.id)
 point5_1.save
@@ -201,7 +201,7 @@ road_trip6 = RoadTrip.new(
   other_language: "English",
   work: "No",
   number_participants: 3)
-road_trip6.photo.attach(io: file6, filename: "road_trip6.png", content_type: "image/jpg")
+road_trip6.photo.attach(io: file6, filename: "road_trip6.jpg", content_type: "image/jpg")
 road_trip6.save
 point6_1 = Point.new(
   longitude: -80.1917902,
@@ -229,7 +229,7 @@ road_trip7 = RoadTrip.new(
   other_language: "English",
   work: "No",
   number_participants: 6)
-road_trip7.photo.attach(io: file7, filename: "road_trip7.png", content_type: "image/jpg")
+road_trip7.photo.attach(io: file7, filename: "road_trip7.jpg", content_type: "image/jpg")
 road_trip7.save
 point7_1 = Point.new(
   longitude: 166.47,
@@ -285,7 +285,7 @@ road_trip9 = RoadTrip.new(
   other_language: "English",
   work: "No",
   number_participants: 5)
-road_trip9.photo.attach(io: file9, filename: "road_trip9.png", content_type: "image/jpg")
+road_trip9.photo.attach(io: file9, filename: "road_trip9.jpg", content_type: "image/jpg")
 road_trip9.save
 point9_1 = Point.new(
   longitude: 166.47,
@@ -313,7 +313,7 @@ road_trip10 = RoadTrip.new(
   other_language: "English",
   work: "Yes",
   number_participants: 9)
-road_trip10.photo.attach(io: file10, filename: "road_trip10.png", content_type: "image/jpg")
+road_trip10.photo.attach(io: file10, filename: "road_trip10.jpg", content_type: "image/jpg")
 road_trip10.save
 point10_1 = Point.new(
   longitude: 103.819836,

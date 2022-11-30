@@ -1,0 +1,23 @@
+.container-search {
+  margin: 0px auto;
+  max-width: 1010px;
+  display: flex;
+}
+
+.container-home {
+  margin: 0px auto;
+  max-width: 1010px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-home {
+
+}
+
+.text-search {
+  display: flex;
+//   justify-content: space-between;
+//   // font-family: 'Bangers';
+//   // font-size: 16px;
+}
