@@ -1,5 +1,5 @@
 
-<h1 class="container-new">Create your road-trip !</h1>
+<h1 class="container-new-title">Hey <%= current_user.first_name %> ! Let's go ...</h1>
 
 <div class="container-new" data-controller="toggle-point-form">
       <%= simple_form_for @road_trip do |f| %>
@@ -13,8 +13,8 @@
         <%= f.input :number_participants %>
         <% 5.times do %>
         <div data-controller="toggle-point-form">
-          <div class="btn btn-primary" data-action="click->toggle-point-form#displayPoint">
-            Add more information
+          <div class="btn-add" data-action="click->toggle-point-form#displayPoint">
+            <i class="fa-solid fa-plus"></i>
           </div>
           <div class="d-none" data-toggle-point-form-target="point">
             <%= f.simple_fields_for :point do |p| %>
@@ -35,6 +35,6 @@
           </div>
         </div>
         <% end %>
-        <%= f.submit "Create", class:"btn-create" %>
+        <%= f.submit "Create", class:"btn-add" %>
       <% end %>
 </div>

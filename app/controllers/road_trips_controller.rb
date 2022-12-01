@@ -21,11 +21,16 @@ class RoadTripsController < ApplicationController
   #   @markers =
   #   [
   #     {
-  #       lat: @rocket.geocode[0],
-  #       lng: @rocket.geocode[1]
+  #       lat: @road_trip.geocode[0],
+  #       lng: @road_trip.geocode[1]
   #     }
   #   ]
   # end
+
+  def show_details
+    @road_trip = RoadTrip.find(params[:id])
+    @points = @road_trip.points
+  end
 
   def new
     @road_trip = RoadTrip.new
@@ -36,7 +41,7 @@ class RoadTripsController < ApplicationController
     @road_trip = RoadTrip.new(road_trip_params)
     @road_trip.user = current_user
     if @road_trip.save
-      redirect_to road_trip_path(@road_trip)
+      redirect_to your_road_trip_path(@road_trip)
     else
       render :new, status: :unprocessable_entity
     end
