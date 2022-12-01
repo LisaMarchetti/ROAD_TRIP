@@ -1,0 +1,19 @@
+<%= @road_trip.title %>
+<%= cl_image_tag @road_trip.photo.key %>
+<%= @road_trip.description %>
+<%= @road_trip.native_language %>
+<%= @road_trip.other_language %>
+<%= @road_trip.work %>
+<%= @road_trip.number_participants %>
+<%# <%= @points.country, as: :string %>
+<% @points.each do |point| %>
+  <%= point.continent %>
+  <%= point.start_date %>
+  <%= point.end_date %>
+  <%= point.description %>
+  <%= point.budget_day %>
+  <%= point.local_language %>
+  <%= point.currency %>
+  <%= point.housing_type %>
+  <%= point.visits_activities %>
+<% end %>
