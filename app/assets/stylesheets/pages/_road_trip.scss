@@ -1,9 +1,12 @@
-.road-trip-title{
+.road-trip-title {
   border-top: 3px solid black;
   border-bottom: 3px solid black;
   padding: 20px 10px;
   font-family: 'Bangers', cursive;
   font-size: 80px;
+}
+.bang-font {
+  font-family: 'Bangers', cursive;
 }
 .p-description {
   padding-top: 2em;
@@ -15,11 +18,13 @@
 }
 .trip-image-small{
   padding-top: 2em;
-  max-width: 80%
+  max-width: 90%
 }
 .d-flex-date {
-  position: fixed;
-  top: 4em;
-  right: 6em;
-  border-bottom: 1em;
+  padding-top: 1em;
+  float:right;
+  position: sticky;
+  top: 6em;
+  right: 8em;
+
 }

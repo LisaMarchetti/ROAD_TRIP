@@ -1,8 +1,40 @@
-<h1>RoadTrips#new</h1>
-<p>Find me in app/views/road_trips/new.html.erb</p>
 
-<%# <%= simple_form_for(article) do |f| %>
-  <!-- [...] -->
-  <%# <%= f.input :photo, as: :file %>
-  <!-- [...] -->
-<%# <% end %>
+<h1 class="container-new">Create your road-trip !</h1>
+
+<div class="container-new" data-controller="toggle-point-form">
+      <%= simple_form_for @road_trip do |f| %>
+        <h3></h3>
+        <%= f.input :title %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :description %>
+        <%= f.input :native_language %>
+        <%= f.input :other_language %>
+        <%= f.input :work %>
+        <%= f.input :number_participants %>
+        <% 5.times do %>
+        <div data-controller="toggle-point-form">
+          <div class="btn btn-primary" data-action="click->toggle-point-form#displayPoint">
+            Add more information
+          </div>
+          <div class="d-none" data-toggle-point-form-target="point">
+            <%= f.simple_fields_for :point do |p| %>
+              <%# <%= p.input :latitude %>
+              <%# <%= p.input :longitude %>
+              <%= p.input :city %>
+              <%= p.input :country %>
+              <%= p.input :continent %>
+              <%= p.input :start_date %>
+              <%= p.input :end_date %>
+              <%= p.input :description %>
+              <%= p.input :budget_day %>
+              <%= p.input :local_language %>
+              <%= p.input :currency %>
+              <%= p.input :housing_type %>
+              <%= p.input :visits_activities %>
+            <% end  %>
+          </div>
+        </div>
+        <% end %>
+        <%= f.submit "Create", class:"btn-create" %>
+      <% end %>
+</div>
