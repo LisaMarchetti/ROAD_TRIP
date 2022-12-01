@@ -30,12 +30,14 @@
     // ADD YOUR ACCESS TOKEN FROM
     // https://account.mapbox.com
     mapboxgl.accessToken = 'pk.eyJ1IjoiZ2F6aG9sZSIsImEiOiJjbDRwaDhnaTQwYTluM2pzMnE5ODRlb2ZlIn0.0ri7_wjPh9NSkIrzJzk96A';
-    const map = new mapboxgl.Map({
+    if (document.querySelector('#map')) {
+      const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
         center: [-74.5, 40], // starting position [lng, lat]
         zoom: 9, // starting zoom
     });
+    }
     </script>
   </body>
 </html>
