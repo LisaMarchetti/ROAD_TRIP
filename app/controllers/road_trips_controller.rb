@@ -1,17 +1,13 @@
 class RoadTripsController < ApplicationController
   def index
-      # if params[:query].present?
-      # sql_query = "continent ILIKE :query OR country ILIKE :query OR state ILIKE :query OR city ILIKE :query"
-      # @road_trips = RoadTrip.where(sql_query, query: "%#{params[:query]}%")
-      # else
-      if params[:destination] && params[:departure] != ""
-        @road_trips = RoadTrip.joins(:points).where('points.city' => params[:destination])
-                              .or(RoadTrip.joins(:points).where('points.country' => params[:destination]))
-                              .or(RoadTrip.joins(:points).where('points.continent' => params[:destination]))
-                              .and(RoadTrip.joins(:points).where('points.start_date' => params[:departure]))
-      else
-        @road_trips = RoadTrip.all
-      end
+    if params[:destination] && params[:departure] != ""
+      @road_trips = RoadTrip.joins(:points).where('points.city' => params[:destination])
+                            .or(RoadTrip.joins(:points).where('points.country' => params[:destination]))
+                            .or(RoadTrip.joins(:points).where('points.continent' => params[:destination]))
+                            .and(RoadTrip.joins(:points).where('points.start_date' => params[:departure]))
+    else
+      @road_trips = RoadTrip.all
+    end
   end
 
   def show
