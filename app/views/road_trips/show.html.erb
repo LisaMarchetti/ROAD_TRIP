@@ -4,18 +4,51 @@
   <%= image_tag @road_trip.photo, class: "trip-image" %>
 
   <div class="p-description">
-    <p><%= @road_trip.description %>
+    <p>"<%= @road_trip.description %>"
+    </p>
+    <p><%= @road_trip.user.first_name %>
     </p>
   </div>
 
-  <div id='map' style='width: 1008px; height: 600px;'></div>
+  <%# <div id='map' style='width: 1008px; height: 600px;'></div> %>
 
 
-  <div class="d-flex-date">
+  <%# <div class="d-flex-date"> %>
     <%# <div>From <%= @road_trip.joins(:points).where('points.start_date')</div> %>
     <%# <div>To <%= @road_trip.joins(:points).where('points.end_date')</div> %>
-  </div>
+  <%# </div> %>
 
+
+  <%# <div class="d-flex"> %>
+    <%# <div><%= image_tag 'airport.jpeg', class: "trip-image-small" %></div>
+    <%# <div><%= image_tag 'airport.jpeg', class: "trip-image-small" %></div>
+    <%# <div><%= image_tag 'airport.jpeg', class: "trip-image-small" %></div>
+  <%# </div> %>
+
+
+  <div class="road-trip-show-details">
+    <div>
+      <ul class="list-inline">
+        <li><h5>continent(s):</h5>
+        <% @points.each do |point| %>
+            <p><%= point.continent %></p>
+           <% end %>
+        </li>
+        <li><h5>country(ies):</h5>
+        <% @points.each do |point| %>
+            <p><%= point.country %></p>
+           <% end %>
+        </li>
+        <li><h5>city(ies):</h5>
+        <% @points.each do |point| %>
+            <p><%= point.city %> - start : <%= point.start_date %> - end : <%= point.end_date %></p>
+           <% end %>
+        </li>
+        <li><h5>spoken language(s):</h5>
+          <p><%= @road_trip.native_language %></p>
+          <p><%= @road_trip.other_language %></p>
+        </li>
+      </ul>
 
   <div class="d-flex">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -28,6 +61,7 @@
     </div>
     <div class="carousel-item">
       <img src="https://images.pexels.com/photos/11525541/pexels-photo-11525541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="...">
+
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

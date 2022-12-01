@@ -1,8 +1,15 @@
 .road-trip-title {
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
+  margin-top: 50px;
+  border-top: 15px solid black;
+  border-bottom: 15px solid black;
   padding: 20px 10px;
-  font-family: 'Permanent Marker', cursive;
+
+  font-family: $headers-font;
+  font-size: 110px;
+  text-align: center;
+}
+.bang-font {
+  font-family: $headers-font;
   font-size: 80px;
 }
 .permanent-marker-font {
@@ -11,20 +18,35 @@
 .p-description {
   padding-top: 2em;
   padding-bottom: 2em;
+  font-family: $headers-font;
 }
 
 .trip-image {
+  margin: 50px;
   min-width: 100%;
+  width: 700px;
+  height: 500px;
 }
 .trip-image-small{
   padding-top: 2em;
   max-width: 90%
 }
-.d-flex-date {
-  padding-top: 1em;
-  float:right;
-  position: sticky;
-  top: 6em;
-  right: 8em;
+//.d-flex-date {
+  // padding-top: 1em;
+  // float:right;
+  // position: sticky;
+  // top: 6em;
+  // right: 8em;
+// }
 
+.list-inline {
+  list-style: none;
+  padding-left: 0%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.list-inline {
+  display: flex;
+  // padding: 70px;
 }
