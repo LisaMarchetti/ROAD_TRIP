@@ -20,10 +20,18 @@ class RoadTripsController < ApplicationController
   # end
 
   def new
-    @road_trip = RoadTrip.new()
+    @road_trip = RoadTrip.new
+    @point = Point.new
   end
 
   def create
+    @road_trip = RoadTrip.new(road_trip_params)
+    @road_trip.user = current_user
+    if @road_trip.save
+      redirect_to road_trip_path(@road_trip)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
@@ -40,6 +48,10 @@ class RoadTripsController < ApplicationController
       # @road_trips = RoadTrip.all
     # end
   end
-end
 
-# penser à ajouter :photo dans la def road_trip_params
+  private
+
+  def road_trip_params
+    params.require(:road_trip).permit(:photo, :title, :description, :native_language, :other_language, :work, :number_participants)
+  end
+end
