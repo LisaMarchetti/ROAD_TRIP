@@ -1,6 +1,13 @@
 class RoadTripsController < ApplicationController
   def index
-    @road_trips = RoadTrip.all
+    if params[:destination] && params[:departure] != ""
+      @road_trips = RoadTrip.joins(:points).where('points.city' => params[:destination])
+                            .or(RoadTrip.joins(:points).where('points.country' => params[:destination]))
+                            .or(RoadTrip.joins(:points).where('points.continent' => params[:destination]))
+                            .and(RoadTrip.joins(:points).where('points.start_date' => params[:departure]))
+    else
+      @road_trips = RoadTrip.all
+    end
   end
 
   def show
@@ -40,18 +47,12 @@ class RoadTripsController < ApplicationController
   def update
   end
 
-  def search
-    # if params[:query].present?
-      # @points = Point.where(city: params[:query]) # ou @road_trips = RoadTrip.points.where(city: params[:query])
-      # @points = Point.where(start_date: params[:query]) # @road_trips = RoadTrip.points.where(start_date: params[:query])
-    # else
-      # @road_trips = RoadTrip.all
-    # end
-  end
+     
 
   private
 
   def road_trip_params
     params.require(:road_trip).permit(:photo, :title, :description, :native_language, :other_language, :work, :number_participants)
   end
+
 end
