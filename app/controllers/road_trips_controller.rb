@@ -20,8 +20,8 @@ class RoadTripsController < ApplicationController
   #   @markers =
   #   [
   #     {
-  #       lat: @rocket.geocode[0],
-  #       lng: @rocket.geocode[1]
+  #       lat: @road_trip.geocode[0],
+  #       lng: @road_trip.geocode[1]
   #     }
   #   ]
   # end
@@ -47,7 +47,7 @@ class RoadTripsController < ApplicationController
   def update
   end
 
-     
+
 
   private
 
