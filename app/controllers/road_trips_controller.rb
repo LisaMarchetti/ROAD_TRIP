@@ -12,6 +12,7 @@ class RoadTripsController < ApplicationController
 
   def show
     @road_trip = RoadTrip.find(params[:id])
+    @points = @road_trip.points
   end
 
   # def show
@@ -47,7 +48,7 @@ class RoadTripsController < ApplicationController
   def update
   end
 
-     
+
 
   private
 
