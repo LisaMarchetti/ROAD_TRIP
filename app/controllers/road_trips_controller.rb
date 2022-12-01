@@ -7,6 +7,18 @@ class RoadTripsController < ApplicationController
     @road_trip = RoadTrip.find(params[:id])
   end
 
+  # def show
+  #   @road_trips = RoadTrip.find(params[:id])
+  #   @points = Point.new()
+  #   @markers =
+  #   [
+  #     {
+  #       lat: @rocket.geocode[0],
+  #       lng: @rocket.geocode[1]
+  #     }
+  #   ]
+  # end
+
   def new
     @road_trip = RoadTrip.new
     @point = Point.new
