@@ -1,0 +1,12 @@
+  <div class="card-home position-relative">
+    <div>
+      <% if road_trip.photo.attached? %>
+        <%= cl_image_tag road_trip.photo.key, height: 400, width: 600, crop: :fill %>
+      <% end %>
+    </div>
+    <div class="card-text position-absolute top-50 start-50 translate-middle">
+      <h4><%= link_to road_trip_path(road_trip) do %>
+        <%= road_trip.title %></h4>
+      <% end %>
+    </div>
+  </div>

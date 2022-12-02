@@ -13,16 +13,16 @@
   <%# <div id='map' style='width: 1008px; height: 600px;'></div> %>
 
 
-  <%# <div class="d-flex-date"> %>
-    <%# <div>From <%= @road_trip.joins(:points).where('points.start_date')</div> %>
-    <%# <div>To <%= @road_trip.joins(:points).where('points.end_date')</div> %>
-  <%# </div> %>
-
+  <%# <div class="d-flex-date">
+    <div>From <%= @road_trip.joins(:points).where('points.start_date')</div>
+    <div>To <%= @road_trip.joins(:points).where('points.end_date')</div>
+  </div>
+ %>
 
   <%# <div class="d-flex"> %>
-    <%# <div><%= image_tag 'airport.jpeg', class: "trip-image-small" %></div>
-    <%# <div><%= image_tag 'airport.jpeg', class: "trip-image-small" %></div>
-    <%# <div><%= image_tag 'airport.jpeg', class: "trip-image-small" %></div>
+    <%# <><%= image_tag 'airport.jpeg', class: "trip-image-small" %>
+    <%# <><%= image_tag 'airport.jpeg', class: "trip-image-small" %>
+    <%# <><%= image_tag 'airport.jpeg', class: "trip-image-small" %>
   <%# </div> %>
 
 
@@ -41,7 +41,9 @@
         </li>
         <li><h5>city(ies):</h5>
         <% @points.each do |point| %>
-            <p><%= point.city %> - start : <%= point.start_date %> - end : <%= point.end_date %></p>
+            <p><%= point.city %>
+            <p>- start : <%= point.start_date %></p>
+            <p->- end : <%= point.end_date %></p>
            <% end %>
         </li>
         <li><h5>spoken language(s):</h5>
@@ -50,30 +52,26 @@
         </li>
       </ul>
 
-  <div class="d-flex">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://images.pexels.com/photos/12510146/pexels-photo-12510146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.pexels.com/photos/4595612/pexels-photo-4595612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.pexels.com/photos/11525541/pexels-photo-11525541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="...">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <% @road_trips.each_with_index do |road_trip, i| %>
+              <div class="carousel-item <%= i == 0 ? 'active' : '' %>">
+                <%= render 'road_trip_card',  road_trip: road_trip %>
+              </div>
+            <% end %>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
 
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
   </div>
 
 </div>
