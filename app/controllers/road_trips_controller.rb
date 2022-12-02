@@ -39,12 +39,28 @@ class RoadTripsController < ApplicationController
   end
 
   def create
+    # "points"=>{"1"=>{"city"=>"iuekvjrt"}, "2"=>{"city"=>""}, "3"=>{"city"=>""}, "4"=>{"city"=>""}, "5"=>{"city"=>""}}
     @road_trip = RoadTrip.new(road_trip_params)
     @road_trip.user = current_user
+    @road_trip.save
+    points = params[:points].values
+    points.each do |point_hash|
+      new_point = Point.new(point_hash)
+      new_point.road_trip = @road_trip
+      new_point.save
+    end
     if @road_trip.save
       redirect_to your_road_trip_path(@road_trip)
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def update_form
+    if user.update_form(points_params)
+      redirect_to new_road_trip_points_path
+    else
+      render :edit
     end
   end
 
@@ -58,6 +74,14 @@ class RoadTripsController < ApplicationController
 
   def road_trip_params
     params.require(:road_trip).permit(:photo, :title, :description, :native_language, :other_language, :work, :number_participants)
+  end
+
+  def points_params
+    params
+      .require(:user)
+       .permit(
+         todos_attributes: [:id, :_destroy, :description]
+       )
   end
 
 end

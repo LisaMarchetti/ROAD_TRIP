@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :points, only: [:new, :create]
   end
   get "/profile", to: "pages#profile", as: :profile # correspond à la show du current_user, le path : profile_path
-  get "/road_trips/search", to: "road_trips#search", as: :search # le path : search_path
+  # get "/road_trips/search", to: "road_trips#search", as: :search # le path : search_path
   post "/participations/:id/validate", to: "participations#validate", as: :validate # le path : validate_path
   get "/road_trip/:id/details", to: "road_trips#show_details", as: :your_road_trip
   # Defines the root path route ("/")
