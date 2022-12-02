@@ -8,11 +8,24 @@ class RoadTripsController < ApplicationController
     else
       @road_trips = RoadTrip.all
     end
+    @points = Point.geocoded
+    @markers = @points.map do |point|
+      {
+        lat: point.latitude,
+        lng: point.longitude
+      }
+    end
   end
 
   def show
     @road_trip = RoadTrip.find(params[:id])
-    @points = @road_trip.points
+    @points = @road_trip.points.geocoded
+    @markers = @points.map do |point|
+      {
+        lat: point.latitude,
+        lng: point.longitude
+      }
+    end
     @road_trips = RoadTrip.all
   end
 
