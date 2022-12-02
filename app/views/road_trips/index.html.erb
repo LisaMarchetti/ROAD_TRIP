@@ -1,35 +1,25 @@
+<div class="container-white">
+  <div id='map' style='width: 800px; height: 600px;'></div>
 
-<div id='map' style='width: 1200px; height: 817px;'></div>
+  <div class="container-search">
+    <%= form_with url: road_trips_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :destination,
+      params[:destination],
+      class: "form-control",
+      placeholder: "Enter a destination (continent, country, state, city)"
+    %>
+    <%= date_field_tag :departure,
+      params[:departure],
+      class: "form-control",
+      placeholder: ""
+    %>
+    <%= submit_tag "Search", class: "btn-gradient" %>
+    <% end %>
+  </div>
 
-<div class="container-search">
-  <%= form_with url: road_trips_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :destination,
-    params[:destination],
-    class: "form-control",
-    placeholder: "Enter a destination (continent, country, state, city)"
-  %>
-  <%= date_field_tag :departure,
-    params[:departure],
-    class: "form-control",
-    placeholder: "(continent, country, state, city)"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
-</div>
-
-<div class="container-home">
-  <% @road_trips.each do |road_trip| %>
-    <div class="card-home">
-      <div>
-        <% if road_trip.photo.attached? %>
-          <%= cl_image_tag road_trip.photo.key, height: 400, width: 600, crop: :fill %>
-        <% end %>
-      </div>
-      <div class="card-text">
-        <h4><%= link_to road_trip_path(road_trip) do %>
-          <%= road_trip.title %></h4>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
+  <div class="container-home">
+    <% @road_trips.each do |road_trip| %>
+      <%= render 'road_trip_card',  road_trip: road_trip %>
+    <% end %>
+  </div>
 </div>
