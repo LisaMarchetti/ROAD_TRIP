@@ -9,7 +9,7 @@ Point.destroy_all
 RoadTrip.destroy_all
 User.destroy_all
 
-user1 = User.create!(email: "toto@gmail.com", password: "tototo", first_name: "Toto", last_name: "Oto", nickname: "Toto", date_of_birth: "1997-05-01", study_field: "Economy", university: "Harvard University", country: "United States", state: "Massachusetts", about_yourself: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", expect_experience: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", passion: "Trek, Books, Running", free_time: "Friends, parcs, tennis")
+user1 = User.create!(email: "toto@gmail.com", password: "tototo", first_name: "Toto", last_name: "Oto", nickname: "Toto", date_of_birth: "1997-05-01", study_field: "Economy", university: "Paris Malakoff University", country: "France", state: "Paris", about_yourself: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", expect_experience: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", passion: "Trek, Books, Running", free_time: "Friends, parcs, tennis")
 user2 = User.create!(email: "titi@gmail.com", password: "tititi", first_name: "Titi", last_name: "Iti", nickname: "Titi", date_of_birth: "1998-06-02", study_field: "Literature", university: "", country: "", state: "", about_yourself: "", expect_experience: "", passion: "", free_time: "")
 user3 = User.create!(email: "tutu@gmail.com", password: "tututu", first_name: "Tutu", last_name: "Utu", nickname: "Tutu", date_of_birth: "1999-07-03", study_field: "Ecology", university: "", country: "", state: "", about_yourself: "", expect_experience: "", passion: "", free_time: "")
 user4 = User.create!(email: "tata@gmail.com", password: "tatata", first_name: "Tata", last_name: "Ata", nickname: "Tata", date_of_birth: "1997-08-04", study_field: "Economy", university: "", country: "", state: "", about_yourself: "", expect_experience: "", passion: "", free_time: "")
@@ -22,20 +22,9 @@ user10 = User.create!(email: "jean-loup@gmail.com", password: "jljljl", first_na
 
 file1 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669728951/voyage_xp69fj.jpg")
 road_trip1 = RoadTrip.new(
-  # title: "America Girls only",
-  title: "Girls only",
+  title: "America Girls only",
   user: user1,
-  description: "There are many variations of passages of
-  Lorem Ipsum available, but the majority have
-  suffered alteration in some form, by injected
-  humour, or randomised words which don't look
-  even slightly believable. If you are going to use
-  a passage of Lorem Ipsum, you need to be sure
-  there isn't anything embarrassing hidden in the
-  middle of text. All the Lorem Ipsum generators
-  on the Internet tend to repeat predefined chunks
-  as necessary, making this the first true generator
-  on the Internet.",
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   native_language: "English",
   other_language: "Spanish",
   work: "Yes",
