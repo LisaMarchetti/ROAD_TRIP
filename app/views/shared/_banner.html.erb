@@ -1,9 +1,8 @@
 <div class="banner d-flex justify-content-between" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/debuijcke/image/upload/v1669982371/Road_trip_banner_img/banner_img1_sntvv9.jpg);">
-  <div class="container bang-font">
-    <h1 class="banner-logo">Road trip</h1>
-  </div>
-  <div class="position-absolute top-0 end-0 m-2">
 
+    <h1 class="banner-logo">Road trip</h1>
+
+  <div class="position-absolute top-0 end-0 m-2 h4">
     <% if user_signed_in? %>
       <h4><%= link_to "Log out", destroy_user_session_path , data: {turbo_method: :delete} %></h4>
     <% else %>
