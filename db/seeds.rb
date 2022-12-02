@@ -23,7 +23,7 @@ user10 = User.create!(email: "jean-loup@gmail.com", password: "jljljl", first_na
 file1 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669979961/Road_trip_cards_view_img/Trip_card_photo_o2kp70.jpg")
 road_trip1 = RoadTrip.new(
   title: "Girls only",
-  user: user0,
+  user: user1,
   description: "There are many variations of passages of
   Lorem Ipsum available, but the majority have
   suffered alteration in some form, by injected
@@ -52,15 +52,15 @@ point1_1 = Point.new(
   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   budget_day: 70,
   local_language: "English",
-  currency: "dollars",
-  housing_type: "hostel",
+  currency: "U.S. dollar (USD)",
+  housing_type: "hotel",
   visits_activities: "",
   road_trip_id: road_trip1.id)
 point1_1.save
 point1_2 = Point.new(
-  longitude: -118.485832,
-  latitude: 34.003342,
-  city: "Los Angeles",
+  longitude: 42.22961,
+  latitude: -87.45367,
+  city: "Chicago",
   country: "United States",
   continent: "North America",
   start_date: "2024-01-18",
@@ -68,15 +68,15 @@ point1_2 = Point.new(
   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   budget_day: 60,
   local_language: "English",
-  currency: "dollars",
-  housing_type: "hostel",
+  currency: "U.S. dollar",
+  housing_type: "Airbnb",
   visits_activities: "",
   road_trip_id: road_trip1.id)
 point1_2.save
 point1_3 = Point.new(
   longitude: -123.032,
   latitude: 37.7272,
-  city: "San Francisco",
+  city: "Yellowstone National Park",
   country: "United States",
   continent: "North America",
   start_date: "2024-01-19",
@@ -84,9 +84,9 @@ point1_3 = Point.new(
   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   budget_day: 65,
   local_language: "English",
-  currency: "dollars",
-  housing_type: "hostel",
-  visits_activities: "",
+  currency: "U.S. dollar",
+  housing_type: "wild-camps",
+  visits_activities: "Mostly hiking",
   road_trip_id: road_trip1.id)
 point1_3.save
 
