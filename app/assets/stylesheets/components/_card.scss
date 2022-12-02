@@ -14,15 +14,19 @@
 //   // font-family: 'Bangers';
 //   // font-size: 16px;
 }
-.card-name {
+.card-name h4{
   color: white;
   text-decoration: none;
-  opacity: 0.7;
   -webkit-text-stroke-color: black;
   -webkit-text-stroke-width: 0.3px;
   text-shadow: 0.5px 0.5px 0px white;
 }
 
-.card-name a:hover {
+.card-name :hover {
+  color: yellow;
+}
+
+.card-name {
   color: white;
+  text-decoration: none;
 }

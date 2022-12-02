@@ -1,8 +1,8 @@
 .footer-links p {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding-top: 50px;
   font-family: $headers-font;
   font-size: 20px;
   color: white;
@@ -17,11 +17,10 @@
   font-size: 50px;
   // padding: 10px 5px;
 }
-// .footer-links a:hover {
-  // opacity: 1;
-// }
+.footer-links a:hover {
+  color: yellow;
+}
 .font-foot{
   background-color: black;
   height: 187px;
-  padding: 10px;
 }
