@@ -2,57 +2,56 @@
 <div class="container-white">
   <h1 class="road-trip-title"><%= @road_trip.title %></h1>
   <%= image_tag @road_trip.photo, class: "trip-image" %>
-
-  <div class="p-description">
-    <p>"<%= @road_trip.description %>"
-    </p>
-    <p><%= @road_trip.user.first_name %>
-    </p>
+  <div class="description-container">
+    <div class="p-description">
+      <p>"<%= @road_trip.description %>"</p>
+    </div>
+    <div class="p-description-user-signature">
+      <p><%= @road_trip.user.first_name %>.</p>
+    </div>
   </div>
 
-  <%# <div id='map' style='width: 1008px; height: 600px;'></div> %>
-
-
-  <%# <div class="d-flex-date">
-    <div>From <%= @road_trip.joins(:points).where('points.start_date')</div>
-    <div>To <%= @road_trip.joins(:points).where('points.end_date')</div>
-  </div>
- %>
-
-  <%# <div class="d-flex"> %>
-    <%# <><%= image_tag 'airport.jpeg', class: "trip-image-small" %>
-    <%# <><%= image_tag 'airport.jpeg', class: "trip-image-small" %>
-    <%# <><%= image_tag 'airport.jpeg', class: "trip-image-small" %>
-  <%# </div> %>
-
-
-  <div class="road-trip-show-details">
-    <div>
+  <div class="road-trip-show-details-container">
+    <h4>Route details</h4>
+    <div class="route-info-container">
       <ul class="list-inline">
-        <li><h5>continent(s):</h5>
+        <li><h5>Continent:</h5>
         <% @points.each do |point| %>
             <p><%= point.continent %></p>
            <% end %>
         </li>
-        <li><h5>country(ies):</h5>
+        <li><h5>Country:</h5>
         <% @points.each do |point| %>
             <p><%= point.country %></p>
            <% end %>
         </li>
-        <li><h5>city(ies):</h5>
+        <li><h5>City:</h5>
         <% @points.each do |point| %>
             <p><%= point.city %>
-            <p>- start : <%= point.start_date %></p>
-            <p->- end : <%= point.end_date %></p>
            <% end %>
         </li>
-        <li><h5>spoken language(s):</h5>
-          <p><%= @road_trip.native_language %></p>
-          <p><%= @road_trip.other_language %></p>
+        <li><h5>Arrival:</h5>
+        <% @points.each do |point| %>
+            <p><%= point.start_date %></p>
+           <% end %>
+        </li>
+        <li><h5>Departure:</h5>
+        <% @points.each do |point| %>
+            <p><%= point.end_date %></p>
+           <% end %>
         </li>
       </ul>
+    </div>
 
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="other-info-container">
+      <li><h5>Spoken languages:</h5>
+        <p><%= @road_trip.native_language %></p>
+        <p><%= @road_trip.other_language %></p>
+      </li>
+    </div>
+  </div>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <% @road_trips.each_with_index do |road_trip, i| %>
               <div class="carousel-item <%= i == 0 ? 'active' : '' %>">
@@ -68,10 +67,5 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-        </div>
-
-
-    </div>
   </div>
-
 </div>

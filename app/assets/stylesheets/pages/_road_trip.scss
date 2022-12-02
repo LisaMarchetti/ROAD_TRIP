@@ -5,7 +5,7 @@
   padding: 20px 10px;
 
   font-family: $headers-font;
-  font-size: 110px;
+  font-size: 150px;
   text-align: center;
 }
 .bang-font {
@@ -13,17 +13,27 @@
   font-size: 80px;
 }
 .permanent-marker-font {
-  font-family: 'Permanent Marker', cursive;
+  font-family: $headers-font;
 }
 .p-description {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  //padding-top: 2em; */
+  // * padding-bottom: 2em; */
   font-family: $headers-font;
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.p-description-user-signature {
+  font-family: $headers-font;
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-align: right;
 }
 
 .trip-image {
   margin: 50px;
-  min-width: 100%;
+  // min-width: 100%;
   width: 700px;
   height: 500px;
 }
