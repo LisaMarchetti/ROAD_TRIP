@@ -4,9 +4,9 @@
   margin: 0%;
 }
 .card-text {
-  position: absolute;
-  color: white;
   text-decoration: none;
+  text-shadow: 1px 1px 2px black;
+  opacity: 0.8;
 }
 
 .text-search {
@@ -15,6 +15,16 @@
 //   // font-family: 'Bangers';
 //   // font-size: 16px;
 }
-.card-name{
- color: white;
+.card-name h4{
+  color: white;
+  text-decoration: none;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.3px;
+}
+
+.card-name {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  letter-spacing: 1px;
 }
