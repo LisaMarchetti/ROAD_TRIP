@@ -44,6 +44,12 @@ class RoadTripsController < ApplicationController
   def show_details
     @road_trip = RoadTrip.find(params[:id])
     @points = @road_trip.points
+    @markers = @points.geocoded.map do |point|
+      {
+        lat: point.latitude,
+        lng: point.longitude
+      }
+    end
   end
 
   def new
