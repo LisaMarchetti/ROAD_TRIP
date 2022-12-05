@@ -1,65 +1,37 @@
-
 <h1 class="container-new-title">Hey <%= current_user.first_name %> ! Let's go ...</h1>
 
 <div class="container-new">
-      <%= simple_form_for @road_trip do |f| %>
-        <h3></h3>
-        <%= f.input :title %>
-        <%= f.input :photo, as: :file %>
-        <%= f.input :description %>
-        <%= f.input :native_language %>
-        <%= f.input :other_language %>
-        <%= f.input :work %>
-        <%= f.input :number_participants %>
-        <% 5.times do |i| %>
-        <div data-controller="toggle-point-form">
-          <div class="btn-add" data-action="click->toggle-point-form#displayPoint">
-            <i class="fa-solid fa-plus"></i>
-          </div>
-          <div data-toggle-point-form-target="point" class="d-none">
-              <label class="form-label string required" for="city-<%= i + 1  %>">City :</label>
-              <input id="city-<%= i + 1  %>" type="text" name="points[<%= i + 1  %>][city]" class="form-control string">
-              <%# <div class="row">
-                <div class="col">
-                  <%= p.input :opens_at, as: :string,
-                              wrapper_html: { class: "mb-4" },
-                              label_html: { class: "form-label text-secondary fw-bold" },
-                              input_html: { data: { controller: "flatpickr" } } %>
-                <%# </div> %>
-                <%# <div class="col">
-                  <%= p.input :closes_at, as: :string,
-                              wrapper_html: { class: "mb-4" },
-                              label_html: { class: "form-label text-secondary fw-bold" },
-                              input_html: { data: { controller: "flatpickr" } } %>
-                <%# </div> %>
-              <%# </div> %>
-              <label class="form-label string required" for="start_date-<%= i + 1  %>">Start date</label>
-              <input id="start_date-<%= i + 1  %>" type="date" name="points[<%= i + 1  %>][start_date]" class="form-control string">
 
-              <label class="form-label string required" for="end_date-<%= i + 1  %>">End date</label>
-              <input id="end_date-<%= i + 1  %>" type="date" name="points[<%= i + 1  %>][end_date]" class="form-control string">
+<%= form_with model: @road_trip, data: { controller: 'nested-form', nested_form_wrapper_selector_value: '.nested-form-wrapper' } do |f| %>
+  <%= f.label :title, class:"form-label" %>
+  <%= f.text_field :title, class:"form-control" %>
+  <%= f.label :photo, class:"form-label" %>
+  <%= f.file_field :photo, class:"form-control" %>
+  <%= f.label :description, class:"form-label" %>
+  <%= f.text_field :description, class:"form-control" %>
+  <%= f.label :native_language, class:"form-label" %>
+  <%= f.text_field :native_language, class:"form-control" %>
+  <%= f.label :other_language, class:"form-label" %>
+  <%= f.text_field :other_language, class:"form-control" %>
+  <%= f.label :work, class:"form-label" %>
+  <%= f.text_field :work, class:"form-control" %>
+  <%= f.label :number_participants, class:"form-label" %>
+  <%= f.number_field :number_participants, class:"form-control" %>
+  <template data-nested-form-target="template">
+    <%= f.fields_for :points, Point.new, child_index: 'NEW_RECORD' do |point_fields| %>
+      <%= render "point_form", f: point_fields %>
+    <% end %>
+  </template>
 
-              <label class="form-label string required" for="description-<%= i + 1  %>">Description</label>
-              <input id="description-<%= i + 1  %>" type="text" name="points[<%= i + 1  %>][description]" class="form-control string">
+  <%= f.fields_for :points do |point_fields| %>
+    <%= render "point_form", f: point_fields %>
+  <% end %>
 
-              <label class="form-label string required" for="budget_day-<%= i + 1  %>">Budget/day</label>
-              <input id="budget_day-<%= i + 1  %>" type="number" name="points[<%= i + 1  %>][budget_day]" class="form-control string">
+  <!-- Inserted elements will be injected before that target. -->
+  <div data-nested-form-target="target"></div>
 
-              <label class="form-label string required" for="local_language-<%= i + 1  %>">Local language</label>
-              <input id="local_language-<%= i + 1  %>" type="text" name="points[<%= i + 1  %>][local_language]" class="form-control string">
+  <button type="button" data-action="nested-form#add">Add point</button>
 
-              <label class="form-label string required" for="currency-<%= i + 1  %>">Currency</label>
-              <input id="currency-<%= i + 1  %>" type="text" name="points[<%= i + 1  %>][currency]" class="form-control string">
-
-              <label class="form-label string required" for="housing_type-<%= i + 1  %>">Housing type</label>
-              <input id="housing_type-<%= i + 1  %>" type="text" name="points[<%= i + 1  %>][housing_type]" class="form-control string">
-
-              <label class="form-label string required" for="visits_activities-<%= i + 1  %>">Visits/activities</label>
-              <input id="visits_activities-<%= i + 1  %>" type="text" name="points[<%= i + 1  %>][visits_activities]" class="form-control string">
-
-          </div>
-        </div>
-        <% end %>
-        <%= f.submit "Create", class:"btn-add" %>
-      <% end %>
+  <%= f.submit 'Save points' %>
+<% end %>
 </div>
