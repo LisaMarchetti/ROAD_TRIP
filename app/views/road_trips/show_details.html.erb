@@ -17,3 +17,13 @@
   <%= point.housing_type %>
   <%= point.visits_activities %>
 <% end %>
+
+<div class="d-flex justify-content-center align-items-center overflow-hidden position-relative" style="height: 550px; width: 100vw">
+  <div
+  data-controller="trip-map"
+    id='trip-map'
+    style='width: 1500px; height: 600px;'
+    data-trip-map-markers-value="<%= @markers.to_json %>"
+    data-trip-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>

@@ -1,0 +1,46 @@
+
+<div class="nested-form-wrapper" data-new-record="<%= f.object.new_record? %>" >
+  <%= f.label :city, class:"form-label" %>
+  <%= f.text_field :city, class:"form-control" %>
+  <%# <%= f.date_field :start_date, class:"form-control" %>
+  <%# <%= f.date_field :end_date, class:"form-control" %>
+
+    <div data-controller="flatpickr" class="my-3">
+      <%= f.label :arrival, class:"form-label" %>
+      <%= f.text_field :start_date, data: { flatpickr_target: "startDate" }  %>
+      <%= f.label :departure, class:"form-label" %>
+      <%= f.text_field :end_date, data: { flatpickr_target: "endDate" }  %>
+    </div>
+
+  <%# <div class="row">
+    <div class="col form-control">
+      <%= f.text_field :start_date, as: :string,
+                  wrapper_html: { class: "mb-4" },
+                  label_html: { class: "form-label text-secondary fw-bold" },
+                  input_html: { data: { controller: "flatpickr" } } %>
+    <%# </div> %>
+    <%# <div class="col">
+      <%= f.text_field :end_date, as: :string,
+                  wrapper_html: { class: "mb-4" },
+                  label_html: { class: "form-label text-secondary fw-bold" },
+                  input_html: { data: { controller: "flatpickr" } } %>
+    <%# </div> %>
+  <%# </div> %>
+
+  <%= f.label :description, class:"form-label" %>
+  <%= f.text_field :description, class:"form-control" %>
+  <%= f.label :budget_day, class:"form-label" %>
+  <%= f.text_field :budget_day, class:"form-control" %>
+  <%= f.label :local_language, class:"form-label" %>
+  <%= f.text_field :local_language, class:"form-control" %>
+  <%= f.label :currency, class:"form-label" %>
+  <%= f.text_field :currency, class:"form-control" %>
+  <%= f.label :housing_type, class:"form-label" %>
+  <%= f.text_field :housing_type, class:"form-control" %>
+  <%= f.label :visits_activities, class:"form-label" %>
+  <%= f.text_field :visits_activities, class:"form-control" %>
+
+  <button type="button" data-action="nested-form#remove">Remove point</button>
+
+  <%= f.hidden_field :_destroy %>
+</div>

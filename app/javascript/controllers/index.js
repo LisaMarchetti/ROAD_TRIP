@@ -15,3 +15,11 @@ application.register("map", MapController)
 
 import TogglePointFormController from "./toggle_point_form_controller"
 application.register("toggle-point-form", TogglePointFormController)
+
+
+import NestedForm from 'stimulus-rails-nested-form'
+application.register('nested-form', NestedForm)
+
+import TripMapController from "./trip_map_controller"
+application.register("trip-map", TripMapController)
+
