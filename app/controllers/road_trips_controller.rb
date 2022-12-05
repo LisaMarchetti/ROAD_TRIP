@@ -12,7 +12,8 @@ class RoadTripsController < ApplicationController
     @markers = @points.map do |point|
       {
         lat: point.latitude,
-        lng: point.longitude
+        lng: point.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {point: point})
       }
     end
   end
