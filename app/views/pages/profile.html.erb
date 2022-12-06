@@ -1,14 +1,21 @@
 <div class="container-white">
-  <h1>First name:</h1>
-  <h1 class="road-trip-title"><%= @user.first_name %></h1>
-  <h1>Last name:</h1>
-  <%= @user.last_name %>
+  <div>
+    <h1>First name:</h1>
+    <%= @user.first_name %>
+    <h1>Last name:</h1>
+    <%= @user.last_name %>
+  </div>
   <h5>Nick name:</h5>
   <%= @user.nickname %>
+  <h5>Date of birth</h5>
   <%= @user.date_of_birth %>
+  <h5>Faculty</h5>
   <%= @user.study_field %>
+  <h5>University:</h5>
   <%= @user.university %>
+  <h5>E-Mail:</h5>
   <%= @user.university_email %>
+  <h5>Country</h5>
   <%= @user.country %>
   <%= @user.state %>
   <%# <%= @user.city %>
@@ -17,4 +24,4 @@
   <%= @user.passion %>
   <%= @user.free_time %>
   <%= @user.password %>
-< /div>
+</div>
