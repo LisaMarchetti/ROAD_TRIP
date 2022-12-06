@@ -8,7 +8,6 @@
   <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325378/Road_trip_avatar_photos/Billie_road_tripper_avatar_ze3qs5.jpg" class="avatar-perso";
   alt="Avatar" />
 </div>
-
   <%= image_tag @road_trip.photo, class: "trip-image" %>
   <div class="description-container">
     <div class="p-description">
@@ -50,9 +49,8 @@
         </li>
       </ul>
     </div>
-
     <div class="other-info-container">
-      <li><h5>Spoken languages:</h5>
+      <li><h5>Spoken languages</h5>
         <p><%= @road_trip.native_language %></p>
         <p><%= @road_trip.other_language %></p>
       </li>

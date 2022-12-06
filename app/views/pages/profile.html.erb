@@ -1,27 +1,37 @@
 <div class="container-white">
-  <div>
-    <h1>First name:</h1>
-    <%= @user.first_name %>
-    <h1>Last name:</h1>
-    <%= @user.last_name %>
+  <h1 class="road-trip-title"><%= @user.first_name + " " + @user.last_name %></h1>
+  <h1 class="road-trips-title">Welcome to my page</h1>
+  <div class="div-avatar">
+    <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325378/Road_trip_avatar_photos/Billie_road_tripper_avatar_ze3qs5.jpg" class="avatar-perso";
+    alt="Avatar" />
   </div>
-  <h5>Nick name:</h5>
+  <h5>Nick name</h5>
   <%= @user.nickname %>
+  <h5>E-Mail</h5>
+  <%= @user.university_email %>
+  <h5>mark_cuker@american.edu</h5>
   <h5>Date of birth</h5>
   <%= @user.date_of_birth %>
-  <h5>Faculty</h5>
-  <%= @user.study_field %>
-  <h5>University:</h5>
-  <%= @user.university %>
-  <h5>E-Mail:</h5>
-  <%= @user.university_email %>
-  <h5>Country</h5>
-  <%= @user.country %>
-  <%= @user.state %>
+  <ul class="list-inline">
+    <li><h5>Faculty</h5>
+    <%= @user.study_field %></li>
+    <li><h5>University</h5>
+    <%= @user.university %></li>
+  </ul>
+  <ul class="list-inline">
+    <li><h5>Country</h5>
+    <%= @user.country %></li>
+    <li><h5>State</h5>
+    <%= @user.state %></li>
+  </ul>
+
   <%# <%= @user.city %>
-  <%= @user.about_yourself %>
-  <%= @user.expect_experience %>
-  <%= @user.passion %>
-  <%= @user.free_time %>
-  <%= @user.password %>
+  <div class="p-description">
+    <%= @user.about_yourself %>
+    <%= @user.expect_experience %>
+    <%= @user.passion %>
+    <%= @user.free_time %>
+  <%# <%= @user.password %>
+  </div>
+
 </div>
