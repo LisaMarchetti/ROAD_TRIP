@@ -28,6 +28,8 @@ class RoadTripsController < ApplicationController
       }
     end
     @road_trips = RoadTrip.all
+    participations = Participation.where(road_trip: @road_trip, user: current_user)
+    @participation = participations.empty? ? nil : participations.first
   end
 
   # def show

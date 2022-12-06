@@ -51,6 +51,12 @@
     </div>
   </div>
 
+  <div>
+    <% if @participation == nil %>
+    <%= link_to "I want to participate", road_trip_participations_path(@road_trip) %>
+    <% end %>
+  </div>
+
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <% @road_trips.each_with_index do |road_trip, i| %>

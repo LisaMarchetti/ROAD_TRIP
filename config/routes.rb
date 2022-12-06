@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get "/road_trips/:id/details", to: "road_trips#show_details", as: :your_road_trip
   # Defines the root path route ("/")
   # root "articles#index"
+  get "/road_trips/:road_trip_id/participations", to: "participations#create", as: :road_trip_participations
 end
