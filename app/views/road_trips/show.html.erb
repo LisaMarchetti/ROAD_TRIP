@@ -12,7 +12,7 @@
   <%= image_tag @road_trip.photo, class: "trip-image" %>
   <div class="description-container">
     <div class="p-description">
-      <p>"<%= @road_trip.description %>"</p>
+      <p><%= @road_trip.description %>"</p>
     </div>
     <div class="p-description-user-signature">
       <p><%= @road_trip.user.first_name %>.</p>
@@ -20,42 +20,40 @@
   </div>
 
   <div class="road-trip-show-details-container">
-    <h4>Route details</h4>
+    <div>
+      <h4>Route details</h4>
+    </div>
     <div class="route-info-container">
-      <ul class="list-inline">
-        <li><h5>Continent:</h5>
+        <div><h5>Continent :</h5>
         <% @points.each do |point| %>
             <p><%= point.continent %></p>
            <% end %>
-        </li>
-        <li><h5>Country:</h5>
+        </div>
+        <div><h5>Country :</h5>
         <% @points.each do |point| %>
             <p><%= point.country %></p>
            <% end %>
-        </li>
-        <li><h5>City:</h5>
+        </div>
+        <div><h5>City :</h5>
         <% @points.each do |point| %>
             <p><%= point.city %>
            <% end %>
-        </li>
-        <li><h5>Arrival:</h5>
+        </div>
+        <div><h5>Arrival :</h5>
         <% @points.each do |point| %>
             <p><%= point.start_date %></p>
            <% end %>
-        </li>
-        <li><h5>Departure:</h5>
+        </div>
+        <div><h5>Departure :</h5>
         <% @points.each do |point| %>
             <p><%= point.end_date %></p>
            <% end %>
-        </li>
-      </ul>
+        </div>
     </div>
-
     <div class="other-info-container">
-      <li><h5>Spoken languages:</h5>
+      <h5>Spoken languages in the group :</h5>
         <p><%= @road_trip.native_language %></p>
         <p><%= @road_trip.other_language %></p>
-      </li>
     </div>
   </div>
 
