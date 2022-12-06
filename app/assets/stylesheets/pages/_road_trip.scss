@@ -8,6 +8,22 @@
   font-size: 150px;
   text-align: center;
 }
+
+// font du titre de la page new
+.road-trip-title-new {
+  margin-top: 50px;
+  border-top: 15px solid black;
+  border-bottom: 15px solid black;
+  padding: 23px 0;
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  text-shadow: rgb(145, 144, 143) 1px 0 10px;
+}
+
+.road-trip-title-new h1 {
+  font-size: 7.5rem;
+}
+
 // .bang-font {
   // font-family: $headers-font;
   // font-size: 80px;

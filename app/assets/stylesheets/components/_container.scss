@@ -27,16 +27,25 @@
 }
 
 .container-new {
-  margin: 0px auto;
-  max-width: 700px;
+  margin-top: 40px;
+  height: auto;
+  width: 45%;
 }
 
 .container-new-title {
-  margin: 0px auto;
-  max-width: 700px;
-  text-align: center;
-  font-size: 30px;
+  // margin: 0px auto;
+  // max-width: 700px;
+  // text-align: center;
+  // font-size: 30px;
   margin: 20px auto;
+  margin-top: 50px;
+  border-top: 15px solid black;
+  border-bottom: 15px solid black;
+  padding: 20px 10px;
+
+  font-family: $headers-font;
+  font-size: 150px;
+  text-align: center;
 }
 
 .route-info-container ul {

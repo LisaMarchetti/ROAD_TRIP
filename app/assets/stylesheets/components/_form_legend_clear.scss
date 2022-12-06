@@ -8,3 +8,25 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+// titre formulaire page new
+.label-style {
+  font-family: $headers-font;
+  font-size: 201%;
+  margin: 5% 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: rgb(145, 144, 143) 1px 0 10px;
+}
+
+.title-new {
+  margin-top: 8%;
+  display: flex;
+  width: 38%;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: rgb(145, 144, 143) 1px 0 10px;
+  h2 {
+    font-size: 3rem;
+  }
+}
