@@ -17,10 +17,14 @@ class ApplicationController < ActionController::Base
   end
 
   def user_trips
-    @user_road_trips = current_user.road_trips
+    if current_user
+      @user_road_trips = current_user.road_trips
+    end
   end
 
   def my_participations
-    @my_participations = current_user.participations
+    if current_user
+      @my_participations = current_user.participations
+    end
   end
 end
