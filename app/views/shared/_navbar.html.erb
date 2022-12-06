@@ -5,14 +5,42 @@
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Concept", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
             <%= link_to "Plan a road trip", new_road_trip_path, class: "nav-link" %>
           </li>
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= current_user.first_name %>
+            </a>
+
+            <ul class="dropdown-menu menu-width" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#"><%= link_to "My profile", profile_path%></a></li>
+              <li>Pending participations :</li>
+              <% @pending_participations.each do |participation| %>
+                <li><%= link_to participation.user.first_name, profile_path(participation.user) %>
+                  asked to participate to
+                  <%= link_to participation.road_trip.title, your_road_trip_path(participation.road_trip) %>
+                  | <%= link_to "Accept", accept_participation_path(participation), data: {turbo_method: :patch} %>
+                  / <%= link_to "Decline", participation_path(participation), data: {turbo_method: :delete} %>
+                </li>
+              <% end %>
+              <li>My trips :</li>
+              <% @user_road_trips.each do |road_trip| %>
+                <li><%= link_to road_trip.title, your_road_trip_path(road_trip) %></li>
+              <% end %>
+              <li>My participations :</li>
+              <% @my_participations.each do |participation| %>
+                <li><%= link_to participation.road_trip.title, your_road_trip_path(participation.road_trip) %></li>
+              <% end %>
+            </ul>
+          </div>
           <li class="nav-item">
-            <%= link_to "My profile", profile_path, class: "nav-link" %>
+            <%= link_to "Concept", "#", class: "nav-link" %>
           </li>
+
+          <%# <li class="nav-item">
+            <%= link_to "My profile", profile_path, class: "nav-link" %>
+          <%# </li> %>
+
           <li class="nav-item">
             <%= link_to "Reviews", "#", class: "nav-link" %>
           </li>
@@ -23,3 +51,5 @@
         <% end %>
       </ul>
 </div>
+
+<% console %>

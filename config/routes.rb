@@ -12,4 +12,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "/road_trips/:road_trip_id/participations", to: "participations#create", as: :road_trip_participations
+
+  resources :participations, only: :destroy do
+    member do
+      patch "accept"
+    end
+  end
 end
