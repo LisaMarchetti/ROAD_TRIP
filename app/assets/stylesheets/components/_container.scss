@@ -69,12 +69,12 @@
 .road-trip-show-details-container {
   // display: flex;
   max-width: 1081px;
-  border: 1.5px solid black;
+  border: 2px solid black;
   border-radius: 5px;
   margin-top: 50px;
   margin-bottom: 80px;
   // height: 450px;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
   h5 {
     font-size: 25px;
   }
@@ -85,6 +85,7 @@
     /* left: 513px; */
     width: 1081px;
     text-align: center;
+    text-shadow: 1px 1px 2px #0000004a;
   }
 }
 
@@ -99,6 +100,7 @@
   h5 {
     font-size: 30px;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #0000004a;
   }
   p {
     font-size: 20px;
