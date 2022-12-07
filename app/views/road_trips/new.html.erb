@@ -1,8 +1,8 @@
 
 <div class="container-white">
   <div class="road-trip-title-new">
-    <h1>Let's create</h1>
-     <h1>a road-trip board</h1>
+    <h1 class="road-trip-title-new-haut">Let's create</h1>
+     <h1 class="road-trip-title-new-bas">a road-trip board</h1>
   </div>
 
   <div class="title-new">
@@ -12,26 +12,41 @@
 
   <div class="container-new">
     <%= form_with model: @road_trip, data: { controller: 'nested-form', nested_form_wrapper_selector_value: '.nested-form-wrapper' } do |f| %>
-      <%= f.label "Let's choose a cool name for your road trip", class:"form-label label-style" %>
-      <%= f.text_field :title, class:"form-control" %>
-      <%= f.label "add photo", class:"form-label label-style" %>
-      <%= f.file_field :photo, class:"form-control" %>
-      <%= f.label " add description", class:"form-label label-style" %>
-      <%= f.text_field :description, class:"form-control" %>
+      <%= f.label "Let's choose a cool name for your road trip *", class:"form-label label-style" %>
+      <%= f.text_field :title, class:"form-control space-style-title" %>
+      <%= f.label "add photo *", class:"form-label label-style" %>
+      <%= f.file_field :photo, class:"form-control space-style-photo" %>
+      <%= f.label "add description *", class:"form-label label-style" %>
+      <%= f.text_field :description, class:"form-control space-style-description" %>
 
-      <div class="title-new">
+      <div class="div-step1">
+        <div class="div-flex">
+          <div>
+            <%= f.label :native_language, class:"form-label label-style" %>
+            <%= f.text_field :native_language, class:"form-control space-style-step1" %>
+          </div>
+          <div>
+            <%= f.label :other_language, class:"form-label label-style" %>
+            <%= f.text_field :other_language, class:"form-control space-style-step1" %>
+          </div>
+        </div>
+        <div class="div-flex">
+          <div>
+            <%= f.label :work, class:"form-label label-style" %>
+            <%= f.text_field :work, class:"form-control space-style-step1" %>
+          </div>
+          <div>
+            <%= f.label :number_participants, class:"form-label label-style" %>
+            <%= f.number_field :number_participants, class:"form-control space-style-step1" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="title-new-2">
         <%= image_tag("Vector.png", class:"icone-trip") %>
         <h2>Next step - Let's plan an itinerary</h2>
       </div>
 
-      <%= f.label :native_language, class:"form-label label-style" %>
-      <%= f.text_field :native_language, class:"form-control" %>
-      <%= f.label :other_language, class:"form-label label-style" %>
-      <%= f.text_field :other_language, class:"form-control" %>
-      <%= f.label :work, class:"form-label label-style" %>
-      <%= f.text_field :work, class:"form-control" %>
-      <%= f.label :number_participants, class:"form-label label-style" %>
-      <%= f.number_field :number_participants, class:"form-control" %>
       <template data-nested-form-target="template">
         <%= f.fields_for :points, Point.new, child_index: 'NEW_RECORD' do |point_fields| %>
           <%= render "point_form", f: point_fields %>
@@ -44,10 +59,49 @@
 
       <!-- Inserted elements will be injected before that target. -->
       <div data-nested-form-target="target"></div>
+      <div class="center-btn">
+        <button type="button" data-action="nested-form#add" class="btn-add">Add stopover point * : <i class="fa-solid fa-plus"></i></button>
+      </div>
 
-      <button type="button" data-action="nested-form#add">Add point</button>
+      <div class="title-new-3">
+        <%= image_tag("Vector.png", class:"icone-trip") %>
+        <h2>Last step - Let's add some features</h2>
+      </div>
 
-      <%= f.submit 'Save points' %>
+    <div class="div-flex-list">
+      <div class="custom-control custom-switch form-check form-switch">
+        <%= f.label " ", class:"form-label label-style-point custom-control-label form-check-label", for:"customSwitch1" %>
+        <div class="div-flex-t">
+          <p class="text-list">Personal bucket list</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">to do list</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">Suggestion box</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">Tips</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">Road-trip album</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">My piggy bank</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+      </div>
+    </div>
+
+      <div class="center-btn">
+        <%= f.submit 'Create', class:"btn-participation"%>
+      </div>
     <% end %>
+
   </div>
 </div>
