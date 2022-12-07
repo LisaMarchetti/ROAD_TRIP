@@ -1,11 +1,12 @@
 .road-trip-title {
   margin-top: 50px;
+  margin-bottom: 30px;
   border-top: 15px solid black;
   border-bottom: 15px solid black;
   padding: 20px 10px;
-
+  text-shadow: 1px 1px 2px #0000004a;
   font-family: $headers-font;
-  font-size: 150px;
+  font-size: 850%;
   text-align: center;
 }
 
@@ -17,7 +18,7 @@
   padding: 23px 0;
   font-family: "Permanent Marker", cursive;
   text-align: center;
-  text-shadow: rgb(145, 144, 143) 1px 0 10px;
+  text-shadow: 1px 1px 2px #0000004a;
 }
 
 .road-trip-title-new h1 {
@@ -45,13 +46,16 @@
   font-size: 25px;
   letter-spacing: 2px;
   text-align: right;
+  text-shadow: 1px 1px 2px #0000004a;
 }
 
 .trip-image {
-  margin: 50px;
+  // margin: 50px;
   // min-width: 100%;
   width: 700px;
   height: 500px;
+  margin-top: 65px;
+  margin-bottom: 65px;
 }
 .trip-image-small{
   padding-top: 2em;
@@ -76,4 +80,8 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
+}
+
+.carousel-perso {
+  margin-top: 140px;
 }
