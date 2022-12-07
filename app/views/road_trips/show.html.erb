@@ -24,34 +24,34 @@
       <h4>Route details</h4>
     </div>
     <div class="route-info-container">
-        <div><h5>Continent :</h5>
+        <div><h5>Continent</h5>
         <% @points.each do |point| %>
             <p><%= point.continent %></p>
            <% end %>
         </div>
-        <div><h5>Country :</h5>
+        <div><h5>Country</h5>
         <% @points.each do |point| %>
             <p><%= point.country %></p>
            <% end %>
         </div>
-        <div><h5>City :</h5>
+        <div><h5>City</h5>
         <% @points.each do |point| %>
             <p><%= point.city %>
            <% end %>
         </div>
-        <div><h5>Arrival :</h5>
+        <div><h5>Arrival</h5>
         <% @points.each do |point| %>
             <p><%= point.start_date %></p>
            <% end %>
         </div>
-        <div><h5>Departure :</h5>
+        <div><h5>Departure</h5>
         <% @points.each do |point| %>
             <p><%= point.end_date %></p>
            <% end %>
         </div>
     </div>
     <div class="other-info-container">
-      <h5>Spoken languages in the group :</h5>
+      <h5>Spoken languages in the group</h5>
         <p><%= @road_trip.native_language %></p>
         <p><%= @road_trip.other_language %></p>
     </div>

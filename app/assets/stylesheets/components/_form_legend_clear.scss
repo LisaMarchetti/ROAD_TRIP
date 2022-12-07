@@ -12,21 +12,98 @@ legend ~ div.form-check:first-of-type {
 // titre formulaire page new
 .label-style {
   font-family: $headers-font;
-  font-size: 201%;
-  margin: 5% 0;
-  width: 100%;
+  font-size: 30px;
+  margin-top: 45px;
+  margin-bottom: 17px;
+  width: 102%;
   text-align: center;
-  text-shadow: rgb(145, 144, 143) 1px 0 10px;
+  text-shadow: 1px 1px 2px #0000004a;
+}
+
+.label-style-point {
+  font-family: $headers-font;
+  font-size: 30px;
+  margin-top: 45px;
+  margin-bottom: 17px;
+  width: 102%;
+  // text-align: center;
+  text-shadow: 1px 1px 2px #0000004a;
 }
 
 .title-new {
-  margin-top: 8%;
+  margin-top: 6%;
   display: flex;
-  width: 38%;
+  width: 33%;
   justify-content: space-between;
   align-items: center;
-  text-shadow: rgb(145, 144, 143) 1px 0 10px;
+  text-shadow: 1px 1px 2px #0000004a;
   h2 {
-    font-size: 3rem;
+    font-size: 43px;
   }
+}
+
+.title-new-2 {
+  width: 90%;
+  margin-top: 102px;
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 1px 1px 2px #0000004a;
+  h2 {
+    font-size: 43px;
+  }
+}
+
+.title-new-3 {
+  width: 92%;
+  margin-top: 102px;
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 1px 1px 2px #0000004a;
+  h2 {
+    font-size: 43px;
+  }
+}
+
+.space-style-title {
+  border: 2px solid #00000085;
+  box-shadow: 2px 2px 4px #00000069;
+  border-radius: 8px;
+  width: 900px;
+}
+
+.space-style-photo {
+  border: 2px solid #00000085;
+  box-shadow: 2px 2px 4px #00000069;
+  border-radius: 8px;
+  width: 450px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.space-style-description {
+  border: 2px solid #00000085;
+  box-shadow: 2px 2px 4px #00000069;
+  border-radius: 8px;
+  width: 900px;
+  height: 237px;
+}
+
+.div-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.div-step1 {
+  margin-bottom: 80px;
+}
+
+.space-style-step1 {
+  border: 2px solid #00000085;
+  box-shadow: 2px 2px 4px #00000069;
+  border-radius: 8px;
+  width: 400px;
 }

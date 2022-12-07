@@ -1,26 +1,26 @@
 
 <div class="nested-form-wrapper" data-new-record="<%= f.object.new_record? %>" >
-  <%= f.label :city, class:"form-label" %>
+  <%= f.label :city, class:"form-label label-style-point" %>
   <%= f.text_field :city, class:"form-control" %>
 
     <div data-controller="flatpickr" class="my-3">
-      <%= f.label :arrival, class:"form-label label-style" %>
+      <%= f.label :arrival, class:"form-label label-style-point" %>
       <%= f.text_field :start_date, data: { flatpickr_target: "startDate" }  %>
-      <%= f.label :departure, class:"form-label label-style" %>
+      <%= f.label :departure, class:"form-label label-style-point" %>
       <%= f.text_field :end_date, data: { flatpickr_target: "endDate" }  %>
     </div>
 
-  <%= f.label :description, class:"form-label label-style" %>
+  <%= f.label :description, class:"form-label label-style-point" %>
   <%= f.text_field :description, class:"form-control" %>
-  <%= f.label :budget_day, class:"form-label label-style" %>
+  <%= f.label :budget_day, class:"form-label label-style-point" %>
   <%= f.text_field :budget_day, class:"form-control" %>
-  <%= f.label :local_language, class:"form-label label-style" %>
+  <%= f.label :local_language, class:"form-label label-style-point" %>
   <%= f.text_field :local_language, class:"form-control" %>
-  <%= f.label "local currency", class:"form-label label-style" %>
+  <%= f.label "local currency", class:"form-label label-style-point" %>
   <%= f.text_field :currency, class:"form-control" %>
-  <%= f.label :housing_type, class:"form-label label-style" %>
+  <%= f.label :housing_type, class:"form-label label-style-point" %>
   <%= f.text_field :housing_type, class:"form-control" %>
-  <%= f.label :visits_activities, class:"form-label label-style" %>
+  <%= f.label :visits_activities, class:"form-label label-style-point" %>
   <%= f.text_field :visits_activities, class:"form-control" %>
 
   <button type="button" data-action="nested-form#remove">Remove point</button>
