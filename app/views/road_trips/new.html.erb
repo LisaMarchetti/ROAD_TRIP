@@ -62,14 +62,46 @@
       <div class="center-btn">
         <button type="button" data-action="nested-form#add" class="btn-add">Add stopover point * : <i class="fa-solid fa-plus"></i></button>
       </div>
-      <div class="center-btn">
-        <%= f.submit 'Save points', class:"btn-participation"%>
-      </div>
-    <% end %>
 
-    <div class="title-new-3">
+      <div class="title-new-3">
         <%= image_tag("Vector.png", class:"icone-trip") %>
         <h2>Last step - Let's add some features</h2>
       </div>
+
+    <div class="div-flex-list">
+      <div class="custom-control custom-switch form-check form-switch">
+        <%= f.label " ", class:"form-label label-style-point custom-control-label form-check-label", for:"customSwitch1" %>
+        <div class="div-flex-t">
+          <p class="text-list">Personal bucket list</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">to do list</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">Suggestion box</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">Tips</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">Road-trip album</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+        <div class="div-flex-t">
+          <p class="text-list">My piggy bank</p>
+          <%= f.check_box :list, class:"form-check-input custom-control-input", id:"customSwitch1" %>
+        </div>
+      </div>
+    </div>
+
+      <div class="center-btn">
+        <%= f.submit 'Create', class:"btn-participation"%>
+      </div>
+    <% end %>
+
   </div>
 </div>

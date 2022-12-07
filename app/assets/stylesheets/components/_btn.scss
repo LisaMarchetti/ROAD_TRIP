@@ -4,7 +4,7 @@
   border-radius: 10px;
   font-size: 30px;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: -15px;
   text-shadow: 1px 1px 2px #0000004a;
   border: none;
   background-color: rgb(244, 244, 244);
@@ -28,6 +28,31 @@
   // }
 }
 
+.btn-remove {
+  background-color: rgb(244, 244, 244);
+  font-family: "Permanent Marker", cursive;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.877);
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: black;
+  box-shadow: 3px 3px 3px #0000009c;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #0000004a;
+  // hover {
+  //   color: rgba(0, 0, 0, 0.705);
+  //   background-color: rgb(244, 244, 244);
+  // }
+}
+
+
 .center-btn {
   text-align: center;
+}
+
+.div-btn-remove {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
 }
