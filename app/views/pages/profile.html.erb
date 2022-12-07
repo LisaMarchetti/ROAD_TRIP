@@ -1,27 +1,96 @@
-<div class="container-white">
-  <div>
-    <h1>First name:</h1>
-    <%= @user.first_name %>
-    <h1>Last name:</h1>
-    <%= @user.last_name %>
+<div class="container">
+  <h1 class="road-trip-title"><%= @user.first_name + " " + @user.last_name %></h1>
+  <div class="profile-header">
+    <h1 class="road-trips-title">Welcome to my page</h1>
+    <div class="div-avatar">
+        <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325378/Road_trip_avatar_photos/Billie_road_tripper_avatar_ze3qs5.jpg" class="avatar-perso";
+        alt="Avatar" />
+      </div>
+        <h5>Nick name</h5>
+          <%= @user.nickname %>
+      </div>
+  <div class="container-description-profile">
+  <div class="p-description">
+    <%= @user.about_yourself %>
+    <%= @user.expect_experience %>
+    <%= @user.passion %>
+    <%= @user.free_time %>
   </div>
-  <h5>Nick name:</h5>
-  <%= @user.nickname %>
-  <h5>Date of birth</h5>
-  <%= @user.date_of_birth %>
-  <h5>Faculty</h5>
-  <%= @user.study_field %>
-  <h5>University:</h5>
-  <%= @user.university %>
-  <h5>E-Mail:</h5>
-  <%= @user.university_email %>
-  <h5>Country</h5>
-  <%= @user.country %>
-  <%= @user.state %>
+  </div>
+
+
+<div class="user-profile-wrapper">
+
+
+ <div class="user-profile-informations">
+
+    <div class="information-title">
+      <h5>My personal informations</h5>
+    </div>
+
+    <div class="user-informations">
+
+        <div>
+          <h5>Date of birth</h5>
+          <%= @user.date_of_birth %>
+        </div>
+        <div>
+          <h5>Faculty</h5>
+          <%= @user.study_field %>
+        </div>
+        <div>
+          <h5>University</h5>
+          <%= @user.university %>
+        </div>
+        <div>
+          <h5>Country</h5>
+          <%= @user.country %>
+        </div>
+        <div>
+          <h5>State</h5>
+          <%= @user.state %>
+        </div>
+
+    </div>
+
+    <div class="user-email">
+      <h5>E-Mail</h5>
+          <%= @user.university_email %>
+      <h5>mark_cuker@american.edu</h5>
+    </div>
+  </div>
+</div>
   <%# <%= @user.city %>
-  <%= @user.about_yourself %>
-  <%= @user.expect_experience %>
-  <%= @user.passion %>
-  <%= @user.free_time %>
-  <%= @user.password %>
+  <%# <%= @user.password %>
+  <div class="carousel-profile">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item  carousel-profile active">
+        <img src="https://images.pexels.com/photos/629142/pexels-photo-629142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="The tower Pisa">
+      </div>
+      <div class="carousel-item carousel-profile">
+        <img src="https://images.pexels.com/photos/2609463/pexels-photo-2609463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="On the mounteens">
+      </div>
+      <div class="carousel-item carousel-profile">
+        <img src="https://images.pexels.com/photos/984868/pexels-photo-984868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="Palmes">
+      </div>
+      <div class="carousel-item carousel-profile">
+        <img src="https://images.pexels.com/photos/3830890/pexels-photo-3830890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="Venise">
+      </div>
+      <div class="carousel-item carousel-profile">
+        <img src="https://images.pexels.com/photos/6140458/pexels-photo-6140458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="The best friends">
+      </div>
+      <div class="carousel-item carousel-profile">
+        <img src="https://images.pexels.com/photos/3756158/pexels-photo-3756158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="Walking">
+      </div>
+      <div class="carousel-item ">
+        <img src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="On the road">
+      </div>
+  </div>
+</div>
+
+
+
+  </div>
+
 </div>
