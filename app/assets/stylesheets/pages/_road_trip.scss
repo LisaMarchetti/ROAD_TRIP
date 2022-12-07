@@ -90,3 +90,69 @@
 .carousel-perso {
   margin-top: 140px;
 }
+
+.room-main-title{
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  // padding: 23px 0;
+}
+
+.room-main-title h1{
+  font-family: $headers-font;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 100px;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+
+}
+
+.welcoming-current-user h4{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+.room-body-itinerary{
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.room-body-itinerary i{
+  font-size: 43px;
+}
+
+.room-body-itinerary img{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.room-body-adding-points{
+  display: flex;
+  justify-content: center;
+  margin-top: -140px;
+}
+
+.room-body-center-activity-logo{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.room-body-center-activity-logo i{
+  margin: 40px;
+  font-size: 35px;
+}
+
+.room-body-adding-activity{
+  display: flex;
+  justify-content: center;
+}
+
+.room-body-road-trip-info{
+  display: flex;
+  justify-content: center;
+}
