@@ -278,7 +278,7 @@ point8_1 = Point.new(
   country: "England",
   continent: "Europe",
   start_date: "2023-09-05",
-  end_date: "2024-04-14" ,
+  end_date: "2024-04-14",
   description: "",
   budget_day: 85,
   local_language: "English",

@@ -10,7 +10,6 @@ class PointsController < ApplicationController
 
 #   private
 
-#   def point_params
-#     params.require(:point).permit()
-#   end
+# ef point_params
+# params.require(:point).permit()
 end
