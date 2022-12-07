@@ -1,27 +1,49 @@
+<div class="room-header-container">
+  <div class="room-main-title">
+    <%# <%= @road_trip.title %>
+    <h1>Road-trip Board</h1>
+  </div>
+  <div class="room-avatar">
+    <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325467/Road_trip_avatar_photos/Marie_road_tripper_avatar_stgajz.jpg" class="avatar-perso";
+    alt="Avatar" />
+    <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325457/Road_trip_avatar_photos/Millie_road_trip_avatar_nung5r.jpg" class="avatar-perso";
+    alt="Avatar" />
+    <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325444/Road_trip_avatar_photos/Mia_road_tripper_avatar_jyijfz.jpg" class="avatar-perso";
+    alt="Avatar" />
+    <%# <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325429/Road_trip_avatar_photos/Katerina_road_tripper_avatar_ziwpki.jpg" class="avatar-perso";
+    alt="Avatar" /> %>
+    <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325418/Road_trip_avatar_photos/Julia_road_tripper_avatar_vfv0ny.jpg" class="avatar-perso";
+    alt="Avatar" />
+    <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325395/Road_trip_avatar_photos/Djey_road_tripper_avatar_nvbsld.jpg" class="avatar-perso";
+    alt="Avatar" />
+  </div>
+  <div class="avatar-current-user">
+    <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325429/Road_trip_avatar_photos/Katerina_road_tripper_avatar_ziwpki.jpg" alt="avatar-current-user">
+  </div>
+  <div class="welcoming-current-user">
+    <h4>Welcome back <%= current_user.first_name %>!</h4>
+  </div>
+  <%# <div class="d-flex justify-content-center align-items-center overflow-hidden position-relative" style="height: 550px; width: 100vw">
+    <%# <div %>
+      <%# data-controller="trip-map" %>
+      <%# id='trip-map' %>
+      <%# style='width: 1500px; height: 600px;' %>
+      <%# data-trip-map-markers-value="<%= @markers.to_json %>
+      <%# data-trip-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>
+    <%# > %>
+    <%# </div> %>
+  <%# </div> %>
+</div>
+<div class="room-body-container">
 
-<%= @road_trip.title %>
-
-<div class="div-avatar">
-  <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325467/Road_trip_avatar_photos/Marie_road_tripper_avatar_stgajz.jpg" class="avatar-perso";
-  alt="Avatar" />
-  <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325457/Road_trip_avatar_photos/Millie_road_trip_avatar_nung5r.jpg" class="avatar-perso";
-  alt="Avatar" />
-  <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325444/Road_trip_avatar_photos/Mia_road_tripper_avatar_jyijfz.jpg" class="avatar-perso";
-  alt="Avatar" />
-  <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325429/Road_trip_avatar_photos/Katerina_road_tripper_avatar_ziwpki.jpg" class="avatar-perso";
-  alt="Avatar" />
-  <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325418/Road_trip_avatar_photos/Julia_road_tripper_avatar_vfv0ny.jpg" class="avatar-perso";
-  alt="Avatar" />
-  <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325395/Road_trip_avatar_photos/Djey_road_tripper_avatar_nvbsld.jpg" class="avatar-perso";
-  alt="Avatar" />
 </div>
 
-<%= cl_image_tag @road_trip.photo.key %>
-<%= @road_trip.description %>
-<%= @road_trip.native_language %>
-<%= @road_trip.other_language %>
-<%= @road_trip.work %>
-<%= @road_trip.number_participants %>
+
+<%# <%= @road_trip.description %>
+<%# <%= @road_trip.native_language %>
+<%# <%= @road_trip.other_language %>
+<%# <%= @road_trip.work %>
+<%# <%= @road_trip.number_participants %>
 <%# <%= @points.country, as: :string %>
 <% @points.each do |point| %>
   <%= point.city %>
@@ -34,13 +56,3 @@
   <%= point.housing_type %>
   <%= point.visits_activities %>
 <% end %>
-
-<div class="d-flex justify-content-center align-items-center overflow-hidden position-relative" style="height: 550px; width: 100vw">
-  <div
-  data-controller="trip-map"
-    id='trip-map'
-    style='width: 1500px; height: 600px;'
-    data-trip-map-markers-value="<%= @markers.to_json %>"
-    data-trip-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-</div>

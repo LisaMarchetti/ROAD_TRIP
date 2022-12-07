@@ -77,3 +77,28 @@
   justify-content: space-between;
   // padding: 70px;
 }
+
+.room-main-title{
+  display: flex;
+  justify-content: center;
+  width: 829px;
+  margin-top: 70px;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  // padding: 23px 0;
+}
+
+.room-main-title h1{
+  font-family: $headers-font;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  font-size: 100px;
+}
+
+.welcoming-current-user h4{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-shadow: 0.5px 0.5px 1px black;
+}
