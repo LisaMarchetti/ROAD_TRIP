@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/road_trips/:road_trip_id/participations", to: "participations#create", as: :road_trip_participations
 
+  get "/damien", to: "pages#damien", as: :damien
+
   resources :participations, only: :destroy do
     member do
       patch "accept"

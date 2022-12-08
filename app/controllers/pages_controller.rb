@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def profile
     @user = current_user
   end
+
+  def damien
+    @damienuser = User.find_by(first_name: "Damien")
+  end
 end
