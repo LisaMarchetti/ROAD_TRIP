@@ -15,9 +15,11 @@
             <ul class="dropdown-menu menu-width" aria-labelledby="dropdownMenuLink">
               <li><a class="dropdown-item" href="#"><%= link_to "My profile", profile_path%></a></li>
               <li>Pending participations :</li>
+              <%= link_to "clique moi", damien_path %>
               <% @pending_participations.each do |participation| %>
-                <li><%= link_to participation.user.first_name, profile_path(participation.user) %>
+                <li><%= link_to participation.user.first_name, damien_path do %>
                   asked to participate to
+                  <% end %>
                   <%= link_to participation.road_trip.title, your_road_trip_path(participation.road_trip) %>
                   | <%= link_to "Accept", accept_participation_path(participation), data: {turbo_method: :patch} %>
                   / <%= link_to "Decline", participation_path(participation), data: {turbo_method: :delete} %>
