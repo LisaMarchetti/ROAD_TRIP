@@ -133,24 +133,28 @@
 }
 
 .user-profile-informations {
-
   border: 2px solid black;
   border-radius: 5px;
   margin-top: 30px;
   margin-bottom: 80px;
-  padding: 30px 20px 20px 20px;
+  padding: 40px 20px 30px 20px;
   h5 {
     font-size: 25px;
   }
   h4 {
-    font-size: 40px;
-    /* position: relative; */
-    /* top: 5px; */
-    /* left: 513px; */
+    font-size: 35px;
     width: 1081px;
     text-align: center;
     text-shadow: 1px 1px 2px #0000004a;
+    padding-left: 162px;
+    padding-bottom: 20px;
   }
+}
+
+.user-profile-road-trip h4 {
+  font-size: 35px;
+  text-shadow: 1px 1px 2px #0000004a;
+  margin-bottom: 30px;
 }
 
 .user-profile-wrapper {
@@ -169,4 +173,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.text-profile-user {
+  font-size: 20px;
 }
