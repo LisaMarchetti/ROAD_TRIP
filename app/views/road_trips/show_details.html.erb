@@ -30,37 +30,73 @@
       style='width: 1500px; height: 600px;'
       data-trip-map-markers-value="<%= @markers.to_json %>"
       data-trip-map-api-key-value="<%= ENV['MAPBOX_API_KEY']%>"
-    >
+    ></div>
   </div>
 </div>
 <div class="room-body-container">
-  <div class="room-body-itinerary">
-  </div>
-  <div class="room-body-adding-points">
+  <%# <div class="room-body-adding-points">
     <h5>Add a stopover point <i class="fa-solid fa-plus"></i></h5>
-  </div>
+  </div> %>
+  <%# <div class="room-body-road-trip-info"> %>
+    <h2>My Detailed Route</h2>
   <div class="room-body-center-activity-logo">
+    <i class="fa-brands fa-airbnb"></i>
+    <i class="fa-solid fa-bed-bunk"></i>
     <i class="fa-solid fa-campground"></i>
     <i class="fa-solid fa-masks-theater"></i>
     <i class="fa-solid fa-landmark"></i>
     <i class="fa-solid fa-person-hiking"></i>
+    <i class="fa-solid fa-umbrella-beach"></i>
+    <i class="fa-sharp fa-solid fa-island-tropical"></i>
+    <i class="fa-solid fa-mountain-sun"></i>
   </div>
   <div class="room-body-adding-activity">
     <h5>Add an activity <i class="fa-solid fa-plus"></i></h5>
   </div>
-  <div class="room-body-road-trip-info">
-    <% @points.each do |point| %>
-      <%= point.city %>
-      <%= point.start_date %>
-      <%= point.end_date %>
+  <div class="detailed-route">
+    <div class= "room-city"><h5>Cities</h5>
+      <% @points.each do |point| %>
+        <p><%= point.city %></p>
+        <% end %>
+    </div>
+    <div class="room-arrival"><h5>Arrival</h5>
+      <% @points.each do |point| %>
+        <p><%= point.start_date %></p>
+      <% end %>
+    </div>
+    <div class="room-departure"><h5>Departure</h5>
+      <% @points.each do |point| %>
+        <p><%= point.end_date %></p>
+      <% end %>
+    </div>
       <%# <%= point.description %>
-      <%= point.budget_day %>
-      <%= point.local_language %>
-      <%= point.currency %>
-      <%= point.housing_type %>
-      <%= point.visits_activities %>
-    <% end %>
+    <div class="room-budget"><h5>Budget per day</h5>
+      <% @points.each do |point| %>
+        <p><%= point.budget_day %></p>
+      <% end %>
+    </div>
+    <div class="room-language"><h5>Local language</h5>
+      <% @points.each do |point| %>
+        <p><%= point.local_language %></p>
+      <% end %>
+    </div>
+    <div class="room-currency"><h5>Local currency</h5>
+      <% @points.each do |point| %>
+        <p><%= point.currency %></p>
+      <% end %>
+    </div>
   </div>
+    <%# <div class="room-accommodation"><h5>Local accommodations</h5>
+      <% @points.each do |point| %>
+        <%# <p><%= point.housing_type %></p>
+      <%# <% end %>
+    <%# </div> %>
+    <%# <div class="room-activity"><h5>Local activities</h5> %>
+      <%# <% @points.each do |point| %>
+        <%# <p><%= point.visits_activities %></p>
+      <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
 </div>
 
 
