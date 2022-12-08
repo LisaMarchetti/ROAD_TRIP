@@ -12,7 +12,7 @@
 
 .btn-participation {
   background-color: white;
-  font-family: "Permanent Marker", cursive;
+  font-family: $headers-font;
   border-radius: 10px;
   padding: 10px 20px;
   border: 1px solid rgba(0, 0, 0, 0.877);
@@ -44,6 +44,31 @@
   //   color: rgba(0, 0, 0, 0.705);
   //   background-color: rgb(244, 244, 244);
   // }
+}
+
+.btn-room{
+  // display: flex;
+  // justify-content: center;
+  background-color: white;
+  font-family: $headers-font;
+  border-radius: 5px;
+  padding: 11px 31px;
+  border: 1px solid rgba(0, 0, 0, 0.877);
+  margin: 40px;
+  // margin-bottom: 30px;
+  // margin-left: 740px;
+  // margin-right: 50px;
+  font-size: 20px;
+  color: black;
+  box-shadow: 3px 3px 3px #0000009c;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #0000004a;
+  text-align: center;
+}
+
+.room-button{
+  display: flex;
+  justify-content: center;
 }
 
 
