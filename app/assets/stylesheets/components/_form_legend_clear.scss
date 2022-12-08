@@ -12,62 +12,66 @@ legend ~ div.form-check:first-of-type {
 // titre formulaire page new
 .label-style {
   font-family: $headers-font;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 45px;
   margin-bottom: 17px;
-  width: 102%;
+  // width: 102%;
   text-align: center;
   text-shadow: 1px 1px 2px #0000004a;
 }
 
 .label-style-point {
   font-family: $headers-font;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 45px;
   margin-bottom: 17px;
-  width: 102%;
-  // text-align: center;
+  // width: 102%;
+  text-align: center;
   text-shadow: 1px 1px 2px #0000004a;
 }
 
 .title-new {
   margin-top: 6%;
-  margin-bottom: -18px;
+  // margin-bottom: -18px;
   display: flex;
-  width: 33%;
-  justify-content: space-between;
+  // width: 33%;
+  justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 2px #0000004a;
   h2 {
-    font-size: 43px;
+    font-size: 30px;
   }
 }
 
-.title-new-2 {
-  width: 90%;
-  margin-top: 102px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-shadow: 1px 1px 2px #0000004a;
-  h2 {
-    font-size: 43px;
-  }
+.title-new img{
+  margin-right: 15px;
 }
 
-.title-new-3 {
-  width: 92%;
-  margin-top: 102px;
-  margin-bottom: -5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-shadow: 1px 1px 2px #0000004a;
-  h2 {
-    font-size: 43px;
-  }
-}
+// .title-new-2 {
+//   // width: 90%;
+//   margin-top: 102px;
+//   margin-bottom: 30px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   text-shadow: 1px 1px 2px #0000004a;
+//   h2 {
+//     font-size: 30px;
+//   }
+// }
+
+// .title-new-3 {
+//   // width: 92%;
+//   margin-top: 102px;
+//   margin-bottom: -5px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   text-shadow: 1px 1px 2px #0000004a;
+//   h2 {
+//     font-size: 30px;
+//   }
+// }
 
 .space-style-title {
   border: 2px solid #00000085;
@@ -99,7 +103,7 @@ legend ~ div.form-check:first-of-type {
 .div-flex-i {
   display: flex;
   justify-content: space-around;
-  width: 233px;
+  // width: 233px;
 }
 
 .div-flex-t {
@@ -173,5 +177,6 @@ legend ~ div.form-check:first-of-type {
 
 .text-list {
   font-family: $headers-font;
-  font-size: 30px;
+  font-size: 20px;
+  margin: auto 0 !important;
 }

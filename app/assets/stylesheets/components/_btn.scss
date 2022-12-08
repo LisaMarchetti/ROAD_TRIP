@@ -1,13 +1,17 @@
 .btn-add {
   padding: 10px 20px;
   font-family: "Permanent Marker", cursive;
-  border-radius: 10px;
-  font-size: 30px;
+  // border-radius: 10px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: -15px;
   text-shadow: 1px 1px 2px #0000004a;
   border: none;
   background-color: rgb(244, 244, 244);
+}
+
+.btn-add i{
+  font-size: 20px;
 }
 
 .btn-participation {

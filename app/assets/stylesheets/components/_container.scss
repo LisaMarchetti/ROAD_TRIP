@@ -51,8 +51,8 @@
   // top: 90px;
   display: flex;
   justify-content: space-between;
-  width: 1039px;
-  padding: 30px;
+  // width: 1039px;
+  // padding: 30px;
   // margin-block: 15px;
   h5 {
     text-align: center;
@@ -145,8 +145,8 @@
     font-size: 25px;
   }
   h4 {
-    font-size: 35px;
-    width: 1081px;
+    font-size: 25px;
+    // width: 1081px;
     text-align: center;
     text-shadow: 1px 1px 2px #0000004a;
     padding-left: 162px;
@@ -155,7 +155,7 @@
 }
 
 .user-profile-road-trip h4 {
-  font-size: 35px;
+  font-size: 25px;
   text-shadow: 1px 1px 2px #0000004a;
   margin-bottom: 30px;
 }
@@ -179,5 +179,5 @@
 }
 
 .text-profile-user {
-  font-size: 20px;
+  font-size: 15px;
 }

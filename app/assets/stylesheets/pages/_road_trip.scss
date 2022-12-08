@@ -1,30 +1,30 @@
 .road-trip-title {
   margin-top: 50px;
   margin-bottom: 30px;
-  border-top: 15px solid black;
-  border-bottom: 15px solid black;
-  padding: 20px 10px;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  // padding: 20px 10px;
   text-shadow: 1px 1px 2px #0000004a;
   font-family: $headers-font;
-  font-size: 850%;
+  font-size: 700%;
   text-align: center;
 }
 
-.h1-welcome {
-    margin-bottom: -36px;
-    margin-top: 55px;
-}
+// .h1-welcome {
+//     margin-bottom: -36px;
+//     margin-top: 55px;
+// }
 
-.nickname {
-  margin-top: 35px;
-  margin-bottom: 17px;
-  font-size: 25px;
-}
+// .nickname {
+//   margin-top: 35px;
+//   margin-bottom: 17px;
+//   font-size: 25px;
+// }
 
-.nickname-user {
-  font-size: 22px;
-  margin-bottom: -14px;
-}
+// .nickname-user {
+//   font-size: 22px;
+//   margin-bottom: -14px;
+// }
 
 // font du titre de la page new
 .road-trip-title-new {
@@ -57,22 +57,20 @@
   //padding-top: 2em; */
   // * padding-bottom: 2em; */
   font-family: $headers-font;
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 2px;
   text-align: center;
 }
 
 .p-description-user-signature {
   font-family: $headers-font;
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 2px;
   text-align: right;
   text-shadow: 1px 1px 2px #0000004a;
 }
 
 .trip-image {
-  // margin: 50px;
-  // min-width: 100%;
   width: 700px;
   height: 500px;
   margin-top: 65px;
@@ -82,13 +80,6 @@
   padding-top: 2em;
   max-width: 90%
 }
-//.d-flex-date {
-  // padding-top: 1em;
-  // float:right;
-  // position: sticky;
-  // top: 6em;
-  // right: 8em;
-// }
 
 .list-inline {
   list-style: none;
@@ -111,7 +102,6 @@
   display: flex;
   justify-content: center;
   margin-top: 70px;
-  // padding: 23px 0;
 }
 
 .room-main-title h1{
@@ -156,7 +146,6 @@
 .room-body-center-activity-logo{
   display: flex;
   justify-content: center;
-  // margin-top: 100px;
 }
 
 .room-body-center-activity-logo i{
@@ -173,16 +162,6 @@
   font-size: 20px;
   margin: 0px;
 }
-
-// .room-body-road-trip-info{
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .room-body-road-trip-info h2{
-//   display: flex;
-//   justify-content: center;
-// }
 
 .room-body-container h2{
   display: flex;
@@ -202,41 +181,3 @@
   margin-bottom: 80px;
   border-top: 6px solid black;
 }
-
-// .room-city{
-//   // display: flex;
-//   // justify-content: center;
-//   position: relative;
-//   left: 150px;
-//   bottom: 3px;
-// }
-
-// .room-arrival{
-//   position: relative;
-//   bottom: 75px;
-//   left: 290px;
-// }
-
-// .room-departure{
-//   position: relative;
-//   bottom: 116px;
-//   left: 446px;
-// }
-
-// .room-language{
-//   position: relative;
-//   bottom: 196px;
-//   left: 622px;
-// }
-
-// .room-currency{
-//   position: relative;
-//   bottom: 237px;
-//   left: 860px;
-// }
-
-// .room-budget{
-//   position: relative;
-//   bottom: 156px;
-//   left: 1092px;
-// }
