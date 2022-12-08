@@ -2,7 +2,7 @@
 .container-white {
   // margin: 10px 20vw;
   margin-bottom: 120px;
-  margin-top: 40px;
+  margin-top: 100px;
   max-width: auto;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
   color: black;
   // background-color: white;
 }
+
 .container-search {
   display: block;
   justify-content: center;
@@ -17,6 +18,7 @@
   font-family: $headers-font;
   letter-spacing: 4%;
 }
+
 .container-home {
   margin: 10px 20vw;
   max-width: auto;
@@ -28,6 +30,7 @@
   height: auto;
   width: 45%;
 }
+
 .container-new-title {
   // margin: 0px auto;
   // max-width: 700px;
