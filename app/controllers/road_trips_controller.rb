@@ -71,7 +71,7 @@ class RoadTripsController < ApplicationController
     #   new_point.save
     # end
     if @road_trip.save
-      redirect_to your_road_trip_path(@road_trip)
+      redirect_to road_trips_path(@road_trip)
     else
       render :new, status: :unprocessable_entity
     end

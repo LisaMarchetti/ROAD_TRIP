@@ -1,20 +1,30 @@
 <div class="container">
   <h1 class="road-trip-title"><%= @user.first_name + " " + @user.last_name %></h1>
   <div class="profile-header">
-    <h1 class="road-trips-title">Welcome to my page</h1>
-    <div class="div-avatar">
+    <h1 class="road-trips-title h1-welcome">Welcome to my page</h1>
+    <div class="div-avatar avatar-current-user">
         <img src="https://res.cloudinary.com/debuijcke/image/upload/v1670325378/Road_trip_avatar_photos/Billie_road_tripper_avatar_ze3qs5.jpg" class="avatar-perso";
         alt="Avatar" />
       </div>
-        <h5>Nick name</h5>
-          <%= @user.nickname %>
+        <h5 class="nickname">Nick name</h5>
+          <div class="nickname-user">
+            <%= @user.nickname %>
+          </div>
       </div>
   <div class="container-description-profile">
   <div class="p-description">
-    <%= @user.about_yourself %>
-    <%= @user.expect_experience %>
-    <%= @user.passion %>
-    <%= @user.free_time %>
+    <div>
+      <%= @user.about_yourself %>
+    </div>
+    <div>
+      <%= @user.expect_experience %>
+    </div>
+    <div>
+      <%= @user.passion %>
+    </div>
+    <div>
+      <%= @user.free_time %>
+    </div>
   </div>
   </div>
 
@@ -25,42 +35,41 @@
  <div class="user-profile-informations">
 
     <div class="information-title">
-      <h5>My personal informations</h5>
+      <h4>My personal informations</h5>
     </div>
 
     <div class="user-informations">
-
-        <div>
-          <h5>Date of birth</h5>
-          <%= @user.date_of_birth %>
-        </div>
-        <div>
-          <h5>Faculty</h5>
-          <%= @user.study_field %>
-        </div>
-        <div>
-          <h5>University</h5>
-          <%= @user.university %>
-        </div>
-        <div>
-          <h5>Country</h5>
-          <%= @user.country %>
-        </div>
-        <div>
-          <h5>State</h5>
-          <%= @user.state %>
-        </div>
-
+      <div>
+        <h5>Date of birth</h5>
+        <p class="text-profile-user"><%= @user.date_of_birth %></p>
+      </div>
+      <div>
+        <h5>Faculty</h5>
+        <p class="text-profile-user"><%= @user.study_field %></p>
+      </div>
+      <div>
+        <h5>University</h5>
+        <p class="text-profile-user"><%= @user.university %></p>
+      </div>
+      <div>
+        <h5>Country</h5>
+        <p class="text-profile-user"><%= @user.country %></p>
+      </div>
+      <div>
+        <h5>State</h5>
+        <p class="text-profile-user"><%= @user.state %></p>
+      </div>
     </div>
 
     <div class="user-email">
       <h5>E-Mail</h5>
-          <%= @user.university_email %>
-      <h5>mark_cuker@american.edu</h5>
+          <p><%= @user.university_email %></p>
+      <p class="text-profile-user">damien.peres@cours-florent.fr</p>
     </div>
 
   </div>
-  <div class="information-title">
+
+  <div class="user-profile-road-trip">
       <h4>My Road Trips</h4>
     </div>
 </div>

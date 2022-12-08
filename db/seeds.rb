@@ -21,6 +21,21 @@ user7 = User.create!(email: "lisa@gmail.com", password: "lilili", first_name: "L
 user8 = User.create!(email: "florent@gmail.com", password: "floflo", first_name: "Florent", last_name: "Dodo", nickname: "Flo", date_of_birth: "1998-03-08", study_field: "Engineering", university: "", country: "", state: "", about_yourself: "", expect_experience: "", passion: "", free_time: "")
 user9 = User.create!(email: "loris@gmail.com", password: "lololo", first_name: "Loris", last_name: "Rere", nickname: "Lolo", date_of_birth: "1999-04-09", study_field: "Ecology", university: "", country: "", state: "", about_yourself: "", expect_experience: "", passion: "", free_time: "")
 user10 = User.create!(email: "jean-loup@gmail.com", password: "jljljl", first_name: "Jean-Loup", last_name: "Pepe", nickname: "Loulou", date_of_birth: "1997-05-10", study_field: "Economy", university: "", country: "", state: "", about_yourself: "", expect_experience: "", passion: "", free_time: "")
+user11 = User.create!(
+  email: "damien@gmail.com",
+  password: "damdam",
+  first_name: "Damien",
+  last_name: "Peres",
+  nickname: "The Best",
+  date_of_birth: "1997-06-10",
+  study_field: "Comedy",
+  university: "Cours Florent",
+  country: "France",
+  state: "Paris",
+  about_yourself: "I am an artist who really wants to discover the world at the rhythm of the sun. I play the guitar, and I like to share music with my friends on the beach around a fire. I like nature, hiking, but also partying in town in warm places. I am passionate about theater and painting, I love strolling through art galleries and changing the world with other visitors. I like to watch the sunset from the top of a mountain or by the sea, to the sound of the waves.",
+  expect_experience: "What do I expect from this trip ? Share highlights with other students and discover other cultures.",
+  passion: "What are my passions in life ? Music, hiking and painting.",
+  free_time: "What do I do in my free time ? See my friends, party to the music and enjoy the parks.")
 
 file1 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669979961/Road_trip_cards_view_img/Trip_card_photo_o2kp70.jpg")
 road_trip1 = RoadTrip.new(
@@ -47,7 +62,7 @@ point1_1 = Point.new(
   longitude: 47.629,
   latitude: 6.834,
   city: "New York",
-  country: "United States",
+  country: "USA",
   continent: "North America",
   start_date: "2023-06-16",
   end_date: "2024-01-17",
@@ -63,8 +78,8 @@ point1_2 = Point.new(
   longitude: 42.22961,
   latitude: -87.45367,
   city: "Chicago",
-  country: "United States",
-  continent: "North America",
+  country: "",
+  continent: "",
   start_date: "2024-01-18",
   end_date: "2024-04-17",
   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -79,8 +94,8 @@ point1_3 = Point.new(
   longitude: -123.032,
   latitude: 37.7272,
   city: "Yellowstone National Park",
-  country: "United States",
-  continent: "North America",
+  country: "",
+  continent: "",
   start_date: "2024-01-19",
   end_date: "2024-06-18",
   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -178,10 +193,10 @@ point4_1.save
 
 file5 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669980313/Road_trip_cards_view_img/Trip_card_photo4_ouahov.jpg")
 road_trip5 = RoadTrip.new(
-  title: "Adventure in New Zealand",
+  title: "Let's go",
   user: user5,
   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  native_language: "Spanish",
+  native_language: "French",
   other_language: "English",
   work: "No",
   number_participants: 4)
@@ -193,16 +208,304 @@ point5_1 = Point.new(
   city: "Wellington",
   country: "New Zealand",
   continent: "Oceania",
-  start_date: "2023-09-15",
-  end_date: "2023-12-22",
+  start_date: "2023-07-15",
+  end_date: "2023-07-31",
   description: "",
-  budget_day: 55,
+  budget_day: 61,
   local_language: "English",
   currency: "New Zealand dollar (NZD)",
-  housing_type: "hotel",
+  housing_type: "",
   visits_activities: "",
   road_trip_id: road_trip5.id)
 point5_1.save
+point5_2 = Point.new(
+  longitude: 153.0234489,
+  latitude: -27.4710107,
+  city: "Brisbane",
+  country: "Australia",
+  continent: "Oceania",
+  start_date: "2023-08-01",
+  end_date: "2023-08-20",
+  description: "",
+  budget_day: 55,
+  local_language: "English",
+  currency: "Dollar",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_2.save
+point5_3 = Point.new(
+  longitude: 115.857048,
+  latitude: -31.953512,
+  city: "Perth",
+  country: "Australia",
+  continent: "Oceania",
+  start_date: "2023-08-21",
+  end_date: "2023-09-29",
+  description: "",
+  budget_day: 55,
+  local_language: "English",
+  currency: "Dollar",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_3.save
+point5_4 = Point.new(
+  longitude: 119.423790,
+  latitude: -5.135399,
+  city: "Makassar",
+  country: "Indonesia",
+  continent: "Oceania",
+  start_date: "2023-09-30",
+  end_date: "2023-10-28",
+  description: "",
+  budget_day: 30,
+  local_language: "Javanese",
+  currency: "Roupie",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_4.save
+point5_5 = Point.new(
+  longitude: 120.982,
+  latitude: 14.6006,
+  city: "Manille",
+  country: "Philippine",
+  continent: "Oceania",
+  start_date: "2023-10-29",
+  end_date: "2023-11-25",
+  description: "",
+  budget_day: 60,
+  local_language: "Filipino",
+  currency: "Peso",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_5.save
+point5_6 = Point.new(
+  longitude: 109.15913,
+  latitude: 11.92144,
+  city: "Cam Ranh",
+  country: "Vietnam",
+  continent: "Asia",
+  start_date: "2023-11-26",
+  end_date: "2023-12-10",
+  description: "",
+  budget_day: 25,
+  local_language: "Vietnamese",
+  currency: "Dong",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_6.save
+point5_7 = Point.new(
+  longitude: 145.137583,
+  latitude: -7.269182,
+  city: "Vinh",
+  country: "Vietnam",
+  continent: "Asia",
+  start_date: "2023-12-11",
+  end_date: "2023-12-27",
+  description: "",
+  budget_day: 25,
+  local_language: "Vietnamese",
+  currency: "Dong",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_7.save
+point5_8 = Point.new(
+  longitude: 19.3907886,
+  latitude: 101.5248055,
+  city: "Sayaboury",
+  country: "Laos",
+  continent: "Asia",
+  start_date: "2023-12-28",
+  end_date: "2024-01-10",
+  description: "",
+  budget_day: 20,
+  local_language: "Lao",
+  currency: "kip",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_8.save
+point5_9 = Point.new(
+  longitude: 39.5972,
+  latitude: 35.8308,
+  city: "Phongsaly",
+  country: "Laos",
+  continent: "Asia",
+  start_date: "2024-01-11",
+  end_date: "2024-01-28",
+  description: "",
+  budget_day: 28,
+  local_language: "Lao",
+  currency: "Kip",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_9.save
+point5_10 = Point.new(
+  longitude: 108.316666,
+  latitude: 22.816668,
+  city: "Nanning",
+  country: "China",
+  continent: "Asia",
+  start_date: "2024-01-29",
+  end_date: "2024-02-05",
+  description: "",
+  budget_day: 26,
+  local_language: "Mandarin",
+  currency: "Renminbi",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_10.save
+point5_11 = Point.new(
+  longitude: 114.283333,
+  latitude: 22.816668,
+  city: "Wuhan",
+  country: "China",
+  continent: "Asia",
+  start_date: "2024-02-06",
+  end_date: "2024-02-14",
+  description: "",
+  budget_day: 28,
+  local_language: "Mandarin",
+  currency: "Renminbi",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_11.save
+point5_11 = Point.new(
+  longitude: 135.484802,
+  latitude: 34.672314,
+  city: "Osaka",
+  country: "Japan",
+  continent: "Asia",
+  start_date: "2024-02-15",
+  end_date: "2024-02-26",
+  description: "",
+  budget_day: 68,
+  local_language: "Japanese",
+  currency: "Yen",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_11.save
+point5_12 = Point.new(
+  longitude: 141.3543763,
+  latitude: 43.0620958,
+  city: "Sapporo",
+  country: "Japan",
+  continent: "Asia",
+  start_date: "2024-02-27",
+  end_date: "2024-03-10",
+  description: "",
+  budget_day: 70,
+  local_language: "Japanese",
+  currency: "Yen",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_12.save
+point5_13 = Point.new(
+  longitude: 110.052,
+  latitude: 46.775,
+  city: "Galshir",
+  country: "Mongolia",
+  continent: "Asia",
+  start_date: "2024-03-11",
+  end_date: "2024-03-20",
+  description: "",
+  budget_day: 40,
+  local_language: "Mongol",
+  currency: "Tugrik",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_13.save
+point5_14 = Point.new(
+  longitude: 96.843979,
+  latitude: 47.73291,
+  city: "Uliastay",
+  country: "Mongolia",
+  continent: "Asia",
+  start_date: "2024-03-21",
+  end_date: "2024-03-29",
+  description: "",
+  budget_day: 40,
+  local_language: "Mongol",
+  currency: "Tugrik",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_14.save
+point5_15 = Point.new(
+  longitude: 85.323960,
+  latitude: 27.717245,
+  city: "katmandou",
+  country: "Nepal",
+  continent: "Asia",
+  start_date: "2024-03-30",
+  end_date: "2024-04-15",
+  description: "",
+  budget_day: 45,
+  local_language: "Nepali",
+  currency: "Roupie",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_15.save
+point5_15 = Point.new(
+  longitude: 75.857727,
+  latitude: 22.719568,
+  city: "Indore",
+  country: "India",
+  continent: "Asia",
+  start_date: "2024-04-16",
+  end_date: "2024-04-28",
+  description: "",
+  budget_day: 30,
+  local_language: "Hindi",
+  currency: "Roupie",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_15.save
+point5_16 = Point.new(
+  longitude: 78.491684,
+  latitude: 17.387140,
+  city: "Hyderabad",
+  country: "India",
+  continent: "Asia",
+  start_date: "2024-04-29",
+  end_date: "2024-05-14",
+  description: "",
+  budget_day: 30,
+  local_language: "Hindi",
+  currency: "Roupie",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_16.save
+point5_17 = Point.new(
+  longitude: 78.491684,
+  latitude: 7.291418,
+  city: "Kandy",
+  country: "Sri Lanka",
+  continent: "Asia",
+  start_date: "2024-05-15",
+  end_date: "2024-05-28",
+  description: "",
+  budget_day: 40,
+  local_language: "Sinhala",
+  currency: "Roupie",
+  housing_type: "",
+  visits_activities: "",
+  road_trip_id: road_trip5.id)
+point5_17.save
 
 file6 = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669985698/Road_trip_cards_view_img/Trip_card_photo5_khyqdm.jpg")
 road_trip6 = RoadTrip.new(
