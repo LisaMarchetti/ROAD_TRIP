@@ -177,43 +177,49 @@
 }
 
 .detailed-route{
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-left: 114px;
+  margin-right: 114px;
+  border-top: 6px solid black;
 }
 
-.room-city{
-  // display: flex;
-  // justify-content: center;
-  position: relative;
-  left: 150px;
-  bottom: 3px;
-}
+// .room-city{
+//   // display: flex;
+//   // justify-content: center;
+//   position: relative;
+//   left: 150px;
+//   bottom: 3px;
+// }
 
-.room-arrival{
-  position: relative;
-  bottom: 75px;
-  left: 290px;
-}
+// .room-arrival{
+//   position: relative;
+//   bottom: 75px;
+//   left: 290px;
+// }
 
-.room-departure{
-  position: relative;
-  bottom: 116px;
-  left: 446px;
-}
+// .room-departure{
+//   position: relative;
+//   bottom: 116px;
+//   left: 446px;
+// }
 
-.room-language{
-  position: relative;
-  bottom: 196px;
-  left: 622px;
-}
+// .room-language{
+//   position: relative;
+//   bottom: 196px;
+//   left: 622px;
+// }
 
-.room-currency{
-  position: relative;
-  bottom: 237px;
-  left: 860px;
-}
+// .room-currency{
+//   position: relative;
+//   bottom: 237px;
+//   left: 860px;
+// }
 
-.room-budget{
-  position: relative;
-  bottom: 156px;
-  left: 1092px;
-}
+// .room-budget{
+//   position: relative;
+//   bottom: 156px;
+//   left: 1092px;
+// }
