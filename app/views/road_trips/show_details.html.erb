@@ -37,13 +37,18 @@
   <%# <div class="room-body-adding-points">
     <h5>Add a stopover point <i class="fa-solid fa-plus"></i></h5>
   </div> %>
-  <%# <div class="room-body-center-activity-logo">
+  <%# <div class="room-body-road-trip-info"> %>
+    <h2>My Detailed Route</h2>
+  <div class="room-body-center-activity-logo">
     <i class="fa-solid fa-campground"></i>
     <i class="fa-solid fa-masks-theater"></i>
     <i class="fa-solid fa-landmark"></i>
     <i class="fa-solid fa-person-hiking"></i>
-  </div> %>
-  <div class="room-body-road-trip-info">
+  </div>
+  <div class="room-body-adding-activity">
+    <h5>Add an activity <i class="fa-solid fa-plus"></i></h5>
+  </div>
+  <div class="detailed-route">
     <div class= "room-city"><h5>Cities</h5>
       <% @points.each do |point| %>
         <p><%= point.city %></p>
@@ -75,20 +80,18 @@
         <p><%= point.currency %></p>
       <% end %>
     </div>
-    <div class="room-accommodation"><h5>Local accommodations</h5>
-      <% @points.each do |point| %>
-        <p><%= point.housing_type %></p>
-      <% end %>
-    </div>
-    <div class="room-activity"><h5>Local activities</h5>
-      <% @points.each do |point| %>
-        <p><%= point.visits_activities %></p>
-      <% end %>
-    </div>
-    <div class="room-body-adding-activity">
-      <h5>Add an activity <i class="fa-solid fa-plus"></i></h5>
-    </div>
   </div>
+    <%# <div class="room-accommodation"><h5>Local accommodations</h5>
+      <% @points.each do |point| %>
+        <%# <p><%= point.housing_type %></p>
+      <%# <% end %>
+    <%# </div> %>
+    <%# <div class="room-activity"><h5>Local activities</h5> %>
+      <%# <% @points.each do |point| %>
+        <%# <p><%= point.visits_activities %></p>
+      <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
 </div>
 
 

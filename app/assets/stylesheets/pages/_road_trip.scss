@@ -111,7 +111,8 @@
 .welcoming-current-user h4{
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 35px;
+  margin-bottom: 50px;
   text-shadow: 0.5px 0.5px 1px black;
 }
 
@@ -139,12 +140,12 @@
 .room-body-center-activity-logo{
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  // margin-top: 100px;
 }
 
 .room-body-center-activity-logo i{
-  margin: 40px;
-  font-size: 35px;
+  margin: 20px;
+  font-size: 30px;
 }
 
 .room-body-adding-activity{
@@ -152,7 +153,67 @@
   justify-content: center;
 }
 
-.room-body-road-trip-info{
+.room-body-adding-activity i{
+  font-size: 20px;
+  margin: 0px;
+}
+
+// .room-body-road-trip-info{
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .room-body-road-trip-info h2{
+//   display: flex;
+//   justify-content: center;
+// }
+
+.room-body-container h2{
   display: flex;
   justify-content: center;
+  border-bottom: 6px solid black;
+  border-top: 6px solid black;
+  margin-top: 20px;
+}
+
+.detailed-route{
+  margin-top: 30px;
+}
+
+.room-city{
+  // display: flex;
+  // justify-content: center;
+  position: relative;
+  left: 150px;
+  bottom: 3px;
+}
+
+.room-arrival{
+  position: relative;
+  bottom: 75px;
+  left: 290px;
+}
+
+.room-departure{
+  position: relative;
+  bottom: 116px;
+  left: 446px;
+}
+
+.room-language{
+  position: relative;
+  bottom: 196px;
+  left: 622px;
+}
+
+.room-currency{
+  position: relative;
+  bottom: 237px;
+  left: 860px;
+}
+
+.room-budget{
+  position: relative;
+  bottom: 156px;
+  left: 1092px;
 }
